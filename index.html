@@ -1,1363 +1,694 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dapur Maestro Kang Encep | Akademi & Mentorship Kuliner Otentik</title>
-    <meta name="description" content="Pelajari rahasia dapur, bumbu warisan Nusantara, dan teknik memasak kelas restoran bersama Chef Kang Encep. Pengalaman lebih dari 30 tahun kini hadir dalam kelas online & privat.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Playfair Display (Serif Elegan) & Plus Jakarta Sans (Modern Sans) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        espresso: {
-                            950: '#0F0C0A',
-                            900: '#181310',
-                            800: '#261E19',
-                            700: '#382D26',
-                        },
-                        cream: {
-                            50: '#FDFBF7',
-                            100: '#F7F2E7',
-                            200: '#ECE2CE',
-                        },
-                        gold: {
-                            400: '#E6C665',
-                            500: '#D4AF37',
-                            600: '#B59024',
-                        },
-                        spice: {
-                            500: '#C85A32',
-                            600: '#A94622',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dapur Kang Encep — Maestro & Edukator Kuliner Profesional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#161210',
+            charcoal: '#211B18',
+            gold: '#C89B3C',
+            goldLight: '#E5C16C',
+            cream: '#FAF6F0',
+            sand: '#EFE7DA'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
         }
-    </script>
-
-    <style>
-        /* Custom Scrollbar & Luxury Accents */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #181310;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #382D26;
-            border-radius: 5px;
-            border: 2px solid #181310;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
-
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF3D1 0%, #D4AF37 50%, #AA8219 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gold-border-glow {
-            box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
-        }
-
-        .hero-pattern {
-            background-color: #0F0C0A;
-            background-image: radial-gradient(circle at 80% 20%, rgba(200, 90, 50, 0.14) 0%, transparent 45%),
-                              radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%);
-        }
-
-        .video-aspect {
-            aspect-ratio: 16 / 9;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF6F0; color: #211B18; }
+    h1, h2, h3, .font-serif-title { font-family: 'Playfair Display', serif; }
+    .gold-gradient { background: linear-gradient(135deg, #C89B3C 0%, #E5C16C 50%, #B38428 100%); }
+  </style>
 </head>
-<body class="bg-cream-50 text-espresso-900 font-sans antialiased selection:bg-gold-500 selection:text-espresso-950">
+<body class="antialiased selection:bg-gold selection:text-espresso">
 
-    <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-espresso-950 text-cream-100 text-xs sm:text-sm py-2.5 px-4 border-b border-gold-500/20">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-            <p class="flex items-center gap-2">
-                <span class="bg-spice-500 text-white text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">Batch Baru Dibuka</span>
-                <span>Kuota Kelas Privat & Mentorship Usaha Kuliner Bersama <strong>Chef Kang Encep</strong> Terbatas!</span>
-            </p>
-            <a href="#katalog-kelas" class="text-gold-400 hover:text-gold-300 font-semibold underline underline-offset-4 flex items-center gap-1">
-                Klaim Promo Early Bird <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
+  <!-- Navigasi -->
+  <header class="sticky top-0 z-40 bg-espresso/95 backdrop-blur-md border-b border-gold/20 text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-espresso font-serif font-bold text-xl shadow-md">
+          KE
         </div>
+        <div>
+          <span class="block font-serif text-lg sm:text-xl font-bold tracking-wide text-cream">Chef Kang Encep</span>
+          <span class="block text-[11px] uppercase tracking-widest text-goldLight">Akademi & Maestro Kuliner</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cream/80">
+        <a href="#tentang" class="hover:text-goldLight transition">Tentang Maestro</a>
+        <a href="#video-demo" class="hover:text-goldLight transition">Cuplikan Kelas</a>
+        <a href="#kelas" class="hover:text-goldLight transition">Program Kursus</a>
+        <a href="#ensiklopedia" class="hover:text-goldLight transition">Rahasia Resep</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="bukaModalDaftar('Konsultasi Program Kursus')" class="gold-gradient text-espresso font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-full shadow-lg hover:brightness-110 transition">
+          Daftar Sekarang
+        </button>
+      </div>
     </div>
+  </header>
 
-    <!-- STICKY NAVIGATION BAR -->
-    <header id="navbar" class="sticky top-0 z-40 bg-espresso-950/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-espresso-950 shadow-lg group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-utensils text-lg"></i>
-                </div>
-                <div>
-                    <span class="block font-serif text-xl sm:text-2xl font-bold text-cream-50 tracking-tight leading-none">
-                        Kang Encep
-                    </span>
-                    <span class="block text-[10px] sm:text-xs uppercase tracking-[0.22em] text-gold-400 font-medium mt-1">
-                        Maestro Kuliner & Edukator
-                    </span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-cream-100/80">
-                <a href="#tentang" class="hover:text-gold-400 transition-colors">Sosok Maestro</a>
-                <a href="#video-demo" class="hover:text-gold-400 transition-colors flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-spice-500 animate-pulse"></span> Cuplikan Video
-                </a>
-                <a href="#ensiklopedia-resep" class="hover:text-gold-400 transition-colors">Keahlian Resep</a>
-                <a href="#katalog-kelas" class="hover:text-gold-400 transition-colors">Program Kelas</a>
-                <a href="#testimoni" class="hover:text-gold-400 transition-colors">Testimoni</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <div class="hidden sm:flex items-center gap-3">
-                <button onclick="openBookingModal('Konsultasi Program Kelas')" class="bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-500 text-espresso-950 font-bold text-sm px-5 py-3 rounded-xl shadow-lg shadow-gold-500/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-base"></i>
-                    <span>Daftar / Konsultasi</span>
-                </button>
-            </div>
-
-            <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" aria-label="Buka Menu" class="lg:hidden text-cream-100 hover:text-gold-400 p-2 rounded-lg focus:outline-none">
-                <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-espresso-900 border-b border-white/10 px-4 pt-3 pb-6 space-y-3">
-            <a href="#tentang" class="mobile-link block py-2 text-cream-100 hover:text-gold-400 font-medium border-b border-white/5">Sosok Maestro</a>
-            <a href="#video-demo" class="mobile-link block py-2 text-cream-100 hover:text-gold-400 font-medium border-b border-white/5">Cuplikan Video Kelas</a>
-            <a href="#ensiklopedia-resep" class="mobile-link block py-2 text-cream-100 hover:text-gold-400 font-medium border-b border-white/5">Ensiklopedia Resep</a>
-            <a href="#katalog-kelas" class="mobile-link block py-2 text-cream-100 hover:text-gold-400 font-medium border-b border-white/5">Katalog Kelas Memasak</a>
-            <a href="#testimoni" class="mobile-link block py-2 text-cream-100 hover:text-gold-400 font-medium border-b border-white/5">Testimoni Alumni</a>
-            <button onclick="openBookingModal('Konsultasi Umum')" class="w-full mt-3 bg-gold-500 text-espresso-950 font-bold py-3 rounded-xl flex items-center justify-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Daftar Sekarang
-            </button>
-        </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="relative hero-pattern text-cream-50 pt-12 pb-20 lg:py-24 overflow-hidden">
-        <!-- Decorative Elements -->
-        <div class="absolute top-10 left-10 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-10 w-80 h-80 bg-spice-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-                
-                <!-- Left Column: Persuasive Copywriting -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2.5 bg-white/5 border border-gold-500/30 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                        <i class="fa-solid fa-award text-gold-400 text-sm"></i>
-                        <span class="text-xs sm:text-sm font-medium text-gold-400 tracking-wide">
-                            Warisan Rasa Lebih dari 30 Tahun Pengalaman Dapur
-                        </span>
-                    </div>
-
-                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight">
-                        Kuasa Rasa dari Tangan Sang Maestro: <span class="gold-gradient-text italic font-semibold">Rahasia Dapur Chef Kang Encep</span>
-                    </h1>
-
-                    <p class="text-cream-200/85 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
-                        Tak ada lagi resep yang "dikira-kira" atau bumbu yang disembunyikan. Pelajari ratusan resep otentik Nusantara, Oriental, hingga standar restoran bintang lima langsung dari ahlinya—dengan takaran presisi yang dijamin anti-gagal.
-                    </p>
-
-                    <!-- Action Buttons -->
-                    <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#katalog-kelas" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-500 text-espresso-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-gold-500/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-base">
-                            <span>Pilih Kelas Memasak</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="#video-demo" class="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-cream-50 border border-white/20 font-semibold px-7 py-4 rounded-xl transition-all flex items-center justify-center gap-3 text-base group">
-                            <span class="w-8 h-8 rounded-full bg-spice-500 text-white flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-play text-xs ml-0.5"></i>
-                            </span>
-                            <span>Tonton Demo Masak</span>
-                        </a>
-                    </div>
-
-                    <!-- Trust Metrics -->
-                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 text-left">
-                        <div class="bg-white/[0.03] p-3.5 rounded-xl border border-white/5">
-                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">30+ Thn</div>
-                            <div class="text-xs text-cream-200/70 mt-0.5">Jam Terbang Kuliner</div>
-                        </div>
-                        <div class="bg-white/[0.03] p-3.5 rounded-xl border border-white/5">
-                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">500+</div>
-                            <div class="text-xs text-cream-200/70 mt-0.5">Koleksi Resep Rahasia</div>
-                        </div>
-                        <div class="bg-white/[0.03] p-3.5 rounded-xl border border-white/5">
-                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">100%</div>
-                            <div class="text-xs text-cream-200/70 mt-0.5">Takaran Gramasi Pasti</div>
-                        </div>
-                        <div class="bg-white/[0.03] p-3.5 rounded-xl border border-white/5">
-                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">UMKM</div>
-                            <div class="text-xs text-cream-200/70 mt-0.5">Siap Pakai Jualan</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Visual Hero Showcase -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Gold Frame Backdrop -->
-                        <div class="absolute -inset-3 bg-gradient-to-tr from-gold-500/30 via-spice-500/20 to-transparent rounded-3xl blur-lg"></div>
-                        
-                        <div class="relative bg-espresso-900 border border-gold-500/30 rounded-3xl overflow-hidden shadow-2xl">
-                            <div class="relative aspect-[4/5] overflow-hidden">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=85" 
-                                    alt="Potret Chef Kang Encep di Dapur" 
-                                    onerror="this.src='https://placehold.co/800x1000/261E19/D4AF37?text=Chef+Kang+Encep'"
-                                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-duration-700"
-                                >
-                                <div class="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/30 to-transparent"></div>
-
-                                <!-- Floating Live Video Badge -->
-                                <a href="#video-demo" class="absolute top-4 right-4 bg-espresso-950/85 backdrop-blur-md border border-gold-500/40 rounded-2xl p-3 flex items-center gap-3 hover:bg-espresso-900 transition-all shadow-lg">
-                                    <div class="w-10 h-10 rounded-full bg-spice-500 flex items-center justify-center text-white animate-pulse">
-                                        <i class="fa-solid fa-video"></i>
-                                    </div>
-                                    <div class="text-left pr-1">
-                                        <span class="block text-[10px] uppercase tracking-wider text-gold-400 font-bold">Video Eksklusif</span>
-                                        <span class="block text-xs font-semibold text-white">Lihat Cara Mengajar</span>
-                                    </div>
-                                </a>
-
-                                <!-- Bottom Quote inside Image -->
-                                <div class="absolute bottom-0 inset-x-0 p-6 sm:p-7">
-                                    <div class="inline-block bg-gold-500 text-espresso-950 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-md mb-3">
-                                        Chef Kang Encep • Maestro Kuliner
-                                    </div>
-                                    <blockquote class="font-serif italic text-lg sm:text-xl text-cream-50 leading-snug">
-                                        "Ilmu masak itu jangan dibawa mati. Di usia saya sekarang, kebahagiaan terbesar saya adalah melihat murid saya sukses memasak lezat untuk keluarganya dan laris manis usahanya."
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- MENGENAL SANG MAESTRO (STORYTELLING SECTION) -->
-    <section id="tentang" class="py-20 lg:py-28 bg-cream-50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Image Grid -->
-                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-                    <div class="space-y-4">
-                        <div class="rounded-2xl overflow-hidden shadow-lg border border-espresso-900/10 aspect-[4/5]">
-                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" 
-                                 alt="Teknik Memasak Profesional" 
-                                 onerror="this.src='https://placehold.co/600x750/261E19/FDFBF7?text=Teknik+Maestro'"
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <div class="bg-espresso-900 text-cream-50 p-5 rounded-2xl shadow-lg border border-gold-500/30">
-                            <i class="fa-solid fa-mortar-pestle text-gold-400 text-2xl mb-2"></i>
-                            <h4 class="font-serif font-bold text-lg text-gold-400">Bumbu Otentik</h4>
-                            <p class="text-xs text-cream-200/80 mt-1 leading-relaxed">
-                                Menguasai racikan rempah tradisional hingga saus rahasia dapur restoran modern.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="space-y-4 pt-8">
-                        <div class="bg-spice-500 text-white p-5 rounded-2xl shadow-lg">
-                            <div class="font-serif text-3xl font-bold">50+ Thn</div>
-                            <div class="text-xs font-medium uppercase tracking-wider opacity-90 mt-1">Usia & Kematangan Rasa</div>
-                            <p class="text-xs opacity-90 mt-2 leading-relaxed">
-                                Pengalaman puluhan tahun yang tidak bisa ditemukan di buku resep biasa.
-                            </p>
-                        </div>
-                        <div class="rounded-2xl overflow-hidden shadow-lg border border-espresso-900/10 aspect-[4/5]">
-                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" 
-                                 alt="Hidangan Istimewa Kang Encep" 
-                                 onerror="this.src='https://placehold.co/600x750/C85A32/FDFBF7?text=Hidangan+Juara'"
-                                 class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Storytelling Content -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 text-spice-600 font-bold text-xs uppercase tracking-[0.2em]">
-                        <span class="w-8 h-[2px] bg-spice-500"></span> Mengapa Belajar dari Kang Encep?
-                    </div>
-
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950 leading-tight">
-                        Bukan Sekadar Resep, Ini Adalah <span class="text-spice-600 italic">Intisari Pengalaman Puluhan Tahun</span> di Dapur Nyata
-                    </h2>
-
-                    <p class="text-espresso-800/85 text-base sm:text-lg leading-relaxed">
-                        Banyak orang menonton ratusan tutorial masak di internet, namun saat dipraktikkan di rumah rasanya tetap hambar atau berbeda. Mengapa? Karena di dunia kuliner profesional, <strong>ada teknik suhu api, urutan memasukkan bumbu, dan takaran kunci</strong> yang jarang dibuka ke publik.
-                    </p>
-
-                    <p class="text-espresso-800/85 text-base sm:text-lg leading-relaxed">
-                        <strong>Chef Kang Encep</strong> adalah sosok chef senior berusia di atas 50 tahun yang telah melewati asam-garam dunia dapur profesional. Beliau dikenal sebagai "ensiklopedia resep berjalan"—sebutkan masakan apa saja, mulai dari Rawon khas Jawa Timur, Rendang Minang otentik, Chinese Food beraroma <em>Wok Hei</em>, hingga hidangan kontinental, beliau menguasai resep dan tekniknya di luar kepala.
-                    </p>
-
-                    <!-- 3 Pillars -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
-                        <div class="bg-cream-100 border border-espresso-900/10 p-4 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-espresso-900 text-gold-400 flex items-center justify-center mb-3">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <h3 class="font-bold text-espresso-950 text-sm">Takaran Anti-Kira-Kira</h3>
-                            <p class="text-xs text-espresso-700 mt-1 leading-relaxed">
-                                Semua resep distandarisasi dalam ukuran gram & sendok yang akurat agar rasa selalu konsisten.
-                            </p>
-                        </div>
-
-                        <div class="bg-cream-100 border border-espresso-900/10 p-4 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-espresso-900 text-gold-400 flex items-center justify-center mb-3">
-                                <i class="fa-solid fa-fire-burner"></i>
-                            </div>
-                            <h3 class="font-bold text-espresso-950 text-sm">Teknik Mudah Dipahami</h3>
-                            <p class="text-xs text-espresso-700 mt-1 leading-relaxed">
-                                Gaya mengajar yang sabar, kebapakan, dan membumi. Cocok untuk pemula maupun pemilik resto.
-                            </p>
-                        </div>
-
-                        <div class="bg-cream-100 border border-espresso-900/10 p-4 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-espresso-900 text-gold-400 flex items-center justify-center mb-3">
-                                <i class="fa-solid fa-book-open-reader"></i>
-                            </div>
-                            <h3 class="font-bold text-espresso-950 text-sm">Bebas Request Resep</h3>
-                            <p class="text-xs text-espresso-700 mt-1 leading-relaxed">
-                                Ingin membedah resep legendaris tertentu untuk menu jualan Anda? Kang Encep siap membimbing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE VIDEO SHOWCASE SECTION ("CUPLIKAN KELAS & DEMO MASAK") -->
-    <section id="video-demo" class="py-20 lg:py-28 bg-espresso-950 text-cream-50 relative overflow-hidden">
-        <!-- Subtle Background Glow -->
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
+  <!-- HERO SECTION (FOTO 1: chef1) -->
+  <section class="relative bg-espresso text-cream overflow-hidden py-14 sm:py-24 border-b border-gold/20">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C89B3C_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
-                <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 text-gold-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                    <i class="fa-solid fa-clapperboard"></i> Cuplikan Materi & Video Edukasi
-                </div>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">
-                    Intip Cara <span class="gold-gradient-text italic">Chef Kang Encep</span> Membongkar Rahasia Dapur
-                </h2>
-                <p class="text-cream-200/75 text-base sm:text-lg">
-                    Setiap modul video direkam dengan jelas dari dekat (<em>close-up</em>), memperlihatkan perubahan tekstur bumbu, warna masakan, dan penjelasan langkah demi langkah yang mudah diikuti.
-                </p>
+        <!-- Teks Utama -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-goldLight text-xs font-semibold tracking-wider uppercase">
+            <span>★ Maestro Kuliner Senior • Pengalaman Puluhan Tahun</span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-bold leading-tight text-cream">
+            Kuasai Ratusan Resep Otentik Langsung dari <span class="text-goldLight italic">Tangan Ahlinya.</span>
+          </h1>
+          <p class="text-base sm:text-lg text-cream/80 leading-relaxed max-w-2xl">
+            Bukan sekadar teori buku resep. Bersama <strong class="text-cream">Chef Kang Encep</strong>, Anda dibimbing dengan sabar, runtut, dan tanpa ada rahasia dapur yang ditutup-tutupi—mulai dari masakan rumahan istimewa hingga standarisasi menu restoran & UMKM.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <button onclick="bukaModalDaftar('Pendaftaran Kelas Kuliner')" class="gold-gradient text-espresso font-bold px-7 py-4 rounded-full shadow-xl hover:scale-[1.02] transition">
+              Mulai Belajar Bersama Kang Encep
+            </button>
+            <a href="#video-demo" class="px-7 py-4 rounded-full border border-gold/50 text-goldLight font-semibold hover:bg-gold/10 transition flex items-center gap-2">
+              <span>▶</span> Tonton Cara Mengajar
+            </a>
+          </div>
+
+          <!-- Statistik Keunggulan -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-xl">
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">500+</p>
+              <p class="text-xs sm:text-sm text-cream/70">Penguasaan Resep Masakan</p>
             </div>
-
-            <!-- Video Player + Playlist Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Main Interactive Video Player (Left 8 Cols) -->
-                <div class="lg:col-span-8 bg-espresso-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl gold-border-glow">
-                    <!-- Video Container -->
-                    <div class="relative video-aspect bg-black group">
-                        <video 
-                            id="main-culinary-video" 
-                            class="w-full h-full object-cover"
-                            poster="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85"
-                            playsinline
-                            controls
-                        >
-                            <source id="video-source" src="https://assets.mixkit.co/videos/preview/mixkit-chef-preparing-a-gourmet-dish-41764-large.mp4" type="video/mp4">
-                            Browser Anda tidak mendukung pemutar video HTML5.
-                        </video>
-
-                        <!-- Custom Interactive Overlay Before Play -->
-                        <div id="video-overlay" onclick="togglePlayVideo()" class="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/40 to-transparent flex flex-col justify-between p-6 sm:p-8 cursor-pointer transition-opacity duration-300">
-                            <div class="flex items-center justify-between">
-                                <span id="active-video-badge" class="bg-spice-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg shadow">
-                                    Modul Unggulan #1
-                                </span>
-                                <span id="active-video-duration" class="bg-espresso-950/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1.5 rounded-lg border border-gold-500/30">
-                                    <i class="fa-regular fa-clock mr-1"></i> 18 Menit Full HD
-                                </span>
-                            </div>
-
-                            <!-- Center Play Button -->
-                            <div class="my-auto mx-auto text-center group">
-                                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gold-500/95 text-espresso-950 flex items-center justify-center shadow-2xl shadow-gold-500/40 transform group-hover:scale-110 transition-all mx-auto">
-                                    <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1"></i>
-                                </div>
-                                <span class="inline-block mt-3 text-xs sm:text-sm font-semibold text-cream-50 bg-espresso-950/75 px-4 py-1.5 rounded-full border border-white/15">
-                                    Klik untuk Memutar Pratinjau Video
-                                </span>
-                            </div>
-
-                            <div>
-                                <h3 id="overlay-video-title" class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white">
-                                    Rahasia 4 Bumbu Dasar Warisan Nusantara (Tahan 3 Bulan)
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video Details & Chef's Secret Box Below Player -->
-                    <div class="p-6 sm:p-8 space-y-5">
-                        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
-                            <div>
-                                <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Sedang Ditampilkan:</span>
-                                <h3 id="detail-video-title" class="font-serif text-xl sm:text-2xl font-bold text-cream-50 mt-0.5">
-                                    Rahasia 4 Bumbu Dasar Warisan Nusantara (Tahan 3 Bulan)
-                                </h3>
-                            </div>
-                            <button onclick="openBookingModal('Akses Penuh Video & Kelas')" class="bg-gold-500 hover:bg-gold-400 text-espresso-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-all flex items-center gap-2 shrink-0">
-                                <i class="fa-solid fa-unlock-keyhole"></i> Dapatkan Akses Penuh
-                            </button>
-                        </div>
-
-                        <p id="detail-video-desc" class="text-cream-200/80 text-sm sm:text-base leading-relaxed">
-                            Di video ini, Kang Encep memperlihatkan teknik menumis bumbu dasar putih, merah, kuning, dan oranye hingga mencapai titik "tanak sempurna". Dengan teknik ini, bumbu tidak langu, aromanya keluar maksimal, dan awet disimpan berbulan-bulan tanpa bahan pengawet kimia.
-                        </p>
-
-                        <!-- Catatan Rahasia Kang Encep -->
-                        <div class="bg-espresso-950/90 border border-gold-500/30 rounded-2xl p-4 sm:p-5 flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fa-solid fa-lightbulb text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-gold-400">
-                                    Tips Rahasia Kang Encep di Modul Ini:
-                                </h4>
-                                <p id="detail-video-tip" class="text-xs sm:text-sm text-cream-100/90 mt-1 italic">
-                                    "Jangan pernah memasukkan minyak di awal saat menghaluskan cabai dan bawang jika ingin bumbu cepat matang merata. Biarkan kadar air menyusut dulu di wajan panas, baru kunci dengan minyak panas bertahap."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interactive Video Playlist (Right 4 Cols) -->
-                <div class="lg:col-span-4 space-y-4">
-                    <div class="flex items-center justify-between px-1">
-                        <h3 class="font-serif text-lg font-bold text-cream-50 flex items-center gap-2">
-                            <i class="fa-solid fa-list-ul text-gold-400"></i> Daftar Cuplikan Materi
-                        </h3>
-                        <span class="text-xs text-cream-200/60">4 Video Sampel</span>
-                    </div>
-
-                    <!-- Playlist Items Container -->
-                    <div id="video-playlist" class="space-y-3">
-                        <!-- Rendered dynamically via JS -->
-                    </div>
-
-                    <!-- Info Card under playlist -->
-                    <div class="bg-gradient-to-br from-spice-600/20 to-espresso-900 border border-spice-500/30 rounded-2xl p-5 mt-6">
-                        <div class="flex items-center gap-3 mb-2">
-                            <i class="fa-solid fa-circle-question text-gold-400 text-xl"></i>
-                            <h4 class="font-bold text-sm text-cream-50">Ingin Request Video Resep Tertentu?</h4>
-                        </div>
-                        <p class="text-xs text-cream-200/80 leading-relaxed mb-4">
-                            Peserta kelas eksklusif dapat meminta Kang Encep membuatkan video bedah resep khusus sesuai menu yang ingin Anda kuasai.
-                        </p>
-                        <button onclick="openBookingModal('Request Bedah Resep Khusus')" class="w-full bg-white/10 hover:bg-white/20 text-cream-50 text-xs font-bold py-2.5 px-4 rounded-xl border border-white/15 transition-all">
-                            Tanyakan ke Admin & Kang Encep →
-                        </button>
-                    </div>
-                </div>
-
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">100%</p>
+              <p class="text-xs sm:text-sm text-cream/70">Ilmu Dapur Tanpa Rahasia</p>
             </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">Privat</p>
+              <p class="text-xs sm:text-sm text-cream/70">& Kelas Reguler Terarah</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- ENSIKLOPEDIA KEAHLIAN RESEP (INTERACTIVE TABS) -->
-    <section id="ensiklopedia-resep" class="py-20 lg:py-28 bg-cream-100 border-b border-espresso-900/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <span class="text-spice-600 font-bold text-xs uppercase tracking-[0.2em]">Gudang Ilmu Kuliner</span>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950">
-                    Semua Resep Ada di Tangan <span class="text-spice-600 italic">Kang Encep</span>
-                </h2>
-                <p class="text-espresso-800/80 text-base sm:text-lg">
-                    Pilih kategori di bawah ini untuk melihat sebagian kecil dari ratusan repertoar masakan yang siap diajarkan secara tuntas kepada Anda.
-                </p>
+        <!-- Bingkai Foto 1 (chef1) -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md">
+            <div class="absolute -inset-3 rounded-3xl gold-gradient opacity-25 blur-lg"></div>
+            <div class="relative rounded-3xl overflow-hidden border-2 border-gold/60 bg-charcoal shadow-2xl aspect-[4/5]">
+              <img
+                data-chef-img="chef1"
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=80"
+                alt="Chef Kang Encep"
+                class="w-full h-full object-cover object-[center_18%]"
+              />
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso via-espresso/80 to-transparent p-6 pt-16">
+                <p class="text-goldLight text-xs font-semibold uppercase tracking-widest">Edukator & Konsultan Rasa</p>
+                <p class="font-serif text-2xl font-bold text-cream">Chef Kang Encep</p>
+                <p class="text-xs text-cream/80 mt-1">"Masakan enak itu bukan soal mahalnya bahan, tapi tepat teknik dan tulus mengajarkannya."</p>
+              </div>
             </div>
-
-            <!-- Category Tabs -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="recipe-tabs">
-                <button onclick="switchRecipeCategory('nusantara')" data-tab="nusantara" class="recipe-tab-btn bg-espresso-950 text-gold-400 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition-all">
-                    <i class="fa-solid fa-bowl-rice mr-1.5"></i> Warisan Nusantara
-                </button>
-                <button onclick="switchRecipeCategory('oriental')" data-tab="oriental" class="recipe-tab-btn bg-white text-espresso-800 hover:bg-espresso-900 hover:text-cream-50 font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl border border-espresso-900/10 transition-all">
-                    <i class="fa-solid fa-fire-flame-curved mr-1.5"></i> Chinese & Oriental Resto
-                </button>
-                <button onclick="switchRecipeCategory('western')" data-tab="western" class="recipe-tab-btn bg-white text-espresso-800 hover:bg-espresso-900 hover:text-cream-50 font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl border border-espresso-900/10 transition-all">
-                    <i class="fa-solid fa-utensils mr-1.5"></i> Hidangan Barat & Steak
-                </button>
-                <button onclick="switchRecipeCategory('bumbu')" data-tab="bumbu" class="recipe-tab-btn bg-white text-espresso-800 hover:bg-espresso-900 hover:text-cream-50 font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl border border-espresso-900/10 transition-all">
-                    <i class="fa-solid fa-pepper-hot mr-1.5"></i> Bumbu Inti & Sambal Jualan
-                </button>
-            </div>
-
-            <!-- Dynamic Recipe Grid -->
-            <div id="recipe-showcase-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Populated by JS -->
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- KATALOG PROGRAM & KELAS EDUKASI (FILTERABLE) -->
-    <section id="katalog-kelas" class="py-20 lg:py-28 bg-cream-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
-                <div class="max-w-2xl space-y-3">
-                    <span class="text-spice-600 font-bold text-xs uppercase tracking-[0.2em]">Kurikulum Terstruktur</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950">
-                        Pilih Program Belajar Sesuai Tujuan Anda
-                    </h2>
-                    <p class="text-espresso-800/80 text-base">
-                        Mulai dari kelas video mandiri, bimbingan resep untuk merintis bisnis kuliner UMKM, hingga kelas privat tatap muka langsung bersama Chef Kang Encep.
-                    </p>
-                </div>
-
-                <!-- Filter Buttons -->
-                <div class="flex flex-wrap gap-2" id="course-filters">
-                    <button onclick="filterCourses('all')" data-filter="all" class="course-filter-btn bg-espresso-950 text-gold-400 text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-all">
-                        Semua Program
-                    </button>
-                    <button onclick="filterCourses('online')" data-filter="online" class="course-filter-btn bg-cream-100 text-espresso-800 hover:bg-espresso-900 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl border border-espresso-900/10 transition-all">
-                        Kelas Video Online
-                    </button>
-                    <button onclick="filterCourses('umkm')" data-filter="umkm" class="course-filter-btn bg-cream-100 text-espresso-800 hover:bg-espresso-900 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl border border-espresso-900/10 transition-all">
-                        Paket Usaha UMKM
-                    </button>
-                    <button onclick="filterCourses('privat')" data-filter="privat" class="course-filter-btn bg-cream-100 text-espresso-800 hover:bg-espresso-900 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl border border-espresso-900/10 transition-all">
-                        Privat & Mentorship
-                    </button>
-                </div>
-            </div>
-
-            <!-- Courses Grid -->
-            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONI MURID & ALUMNI -->
-    <section id="testimoni" class="py-20 lg:py-28 bg-espresso-900 text-cream-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-                <span class="text-gold-400 font-bold text-xs uppercase tracking-[0.2em]">Kisah Sukses Murid</span>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">
-                    Apa Kata Mereka yang Telah Belajar dari <span class="gold-gradient-text italic">Kang Encep?</span>
-                </h2>
-                <p class="text-cream-200/75 text-base">
-                    Dari ibu rumah tangga yang ingin menyajikan masakan terbaik, hingga pengusaha rumah makan yang omzetnya melonjak berkat perbaikan resep.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-espresso-950/80 border border-white/10 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-500/40 transition-all">
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-1 text-gold-400 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-cream-100/90 text-sm sm:text-base leading-relaxed italic">
-                            "Saya buka usaha katering sudah 2 tahun tapi sering komplain rasa kurang konsisten. Setelah ikut kelas Bumbu Inti & Standarisasi Resep Kang Encep, sekarang siapapun karyawan yang masak di dapur, rasanya 100% sama persis dan jauh lebih sedap!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-6 mt-6 border-t border-white/10">
-                        <div class="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center font-serif font-bold text-gold-400 text-lg">
-                            HJ
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-cream-50 text-sm">Ibu Hj. Ratna Sari</h4>
-                            <p class="text-xs text-gold-400">Pemilik Katering Berkah Rasa, Bandung</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-espresso-950/80 border border-white/10 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-500/40 transition-all">
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-1 text-gold-400 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-cream-100/90 text-sm sm:text-base leading-relaxed italic">
-                            "Kang Encep itu ngajarinnya sabar banget seperti bapak sendiri. Tidak ada ilmu yang ditutup-tutupi. Resep Nasi Goreng Resto dan Ayam Bakar Bumbu Rujaknya sekarang jadi menu paling laris di kedai saya, sehari bisa habis 150 porsi."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-6 mt-6 border-t border-white/10">
-                        <div class="w-12 h-12 rounded-full bg-spice-500/20 border border-spice-500/40 flex items-center justify-center font-serif font-bold text-spice-500 text-lg">
-                            DH
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-cream-50 text-sm">Dimas Hendrawan</h4>
-                            <p class="text-xs text-gold-400">Founder Kedai Seleraku, Jakarta Selatan</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-espresso-950/80 border border-white/10 rounded-3xl p-7 flex flex-col justify-between hover:border-gold-500/40 transition-all">
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-1 text-gold-400 text-sm">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-cream-100/90 text-sm sm:text-base leading-relaxed italic">
-                            "Dulu saya paling takut masak daging sapi karena sering alot. Dari video Kang Encep saya baru tahu teknik memotong serat dan marinasi alami tanpa bahan kimia. Suami dan anak-anak sampai kaget dikira beli di restoran mahal!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-6 mt-6 border-t border-white/10">
-                        <div class="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center font-serif font-bold text-gold-400 text-lg">
-                            MA
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-cream-50 text-sm">dr. Meutia Anindita</h4>
-                            <p class="text-xs text-gold-400">Peserta Kelas Masakan Nusantara, Surabaya</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="py-16 lg:py-24 bg-cream-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 space-y-2">
-                <span class="text-spice-600 font-bold text-xs uppercase tracking-[0.2em]">Tanya Jawab</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">
-                    Pertanyaan yang Sering Diajukan
-                </h2>
-            </div>
-
-            <div class="space-y-4" id="faq-container">
-                <!-- FAQ Item 1 -->
-                <div class="bg-white border border-espresso-900/10 rounded-2xl overflow-hidden">
-                    <button onclick="toggleFaq(0)" class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-espresso-950 hover:text-spice-600 transition-colors">
-                        <span>Apakah pemula yang belum pernah memasak bisa mengikuti kelas Kang Encep?</span>
-                        <i id="faq-icon-0" class="fa-solid fa-chevron-down text-sm transition-transform"></i>
-                    </button>
-                    <div id="faq-content-0" class="px-6 pb-5 text-sm text-espresso-800/80 leading-relaxed">
-                        Sangat bisa! Justru keunggulan utama Chef Kang Encep adalah cara penyampaiannya yang runtut dari nol, menggunakan bahasa sehari-hari yang mudah dimengerti, serta dilengkapi modul PDF takaran gramasi yang pasti sehingga Anda tinggal mengikuti langkahnya.
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="bg-white border border-espresso-900/10 rounded-2xl overflow-hidden">
-                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-espresso-950 hover:text-spice-600 transition-colors">
-                        <span>Bagaimana jika saya ingin bertanya langsung kepada Chef Kang Encep saat praktik?</span>
-                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-sm transition-transform"></i>
-                    </button>
-                    <div id="faq-content-1" class="hidden px-6 pb-5 text-sm text-espresso-800/80 leading-relaxed">
-                        Setiap peserta resmi akan mendapatkan akses ke grup diskusi & jalur konsultasi yang dikelola oleh tim manajemen Kang Encep. Pertanyaan Anda tentang kendala masak atau substitusi bahan akan dijawab langsung oleh Kang Encep melalui pesan suara/video maupun sesi tanya-jawab berkala.
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="bg-white border border-espresso-900/10 rounded-2xl overflow-hidden">
-                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex items-center justify-between font-bold text-espresso-950 hover:text-spice-600 transition-colors">
-                        <span>Apakah resep-resep di kelas ini boleh dipakai untuk jualan / usaha restoran?</span>
-                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-sm transition-transform"></i>
-                    </button>
-                    <div id="faq-content-2" class="hidden px-6 pb-5 text-sm text-espresso-800/80 leading-relaxed">
-                        100% Boleh dan sangat dianjurkan! Tujuan mulia Kang Encep membuka kelas edukasi ini adalah agar ilmu dan resep rahasia beliau menjadi amal jariyah yang membantu banyak keluarga membuka lapangan pekerjaan dan usaha kuliner yang laris.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CALL TO ACTION BANNER -->
-    <section class="py-16 bg-espresso-950 text-cream-50 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold leading-tight">
-                Siap Menguasai Rahasia Rasa Bersama <span class="gold-gradient-text italic">Chef Kang Encep?</span>
-            </h2>
-            <p class="text-cream-200/80 max-w-2xl mx-auto text-base sm:text-lg">
-                Jangan lewatkan kesempatan langka belajar langsung dari maestro kuliner berpengalaman puluhan tahun. Hubungi tim manajemen kami untuk pendaftaran kelas atau konsultasi privat.
-            </p>
-            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button onclick="openBookingModal('Pendaftaran Prioritas')" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-500 text-espresso-950 font-bold px-8 py-4 rounded-xl shadow-xl text-base flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>Daftar & Hubungi Manajemen Kang Encep</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-espresso-950 text-cream-200/60 py-12 border-t border-white/10 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-gold-500 flex items-center justify-center text-espresso-950 font-bold">
-                    <i class="fa-solid fa-utensils"></i>
-                </div>
-                <div>
-                    <span class="font-serif font-bold text-cream-50 text-lg">Dapur Maestro Kang Encep</span>
-                    <p class="text-xs text-cream-200/50">Akademi Kuliner, Resep Warisan & Konsultan F&B Indonesia</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-6 text-xs">
-                <a href="#tentang" class="hover:text-gold-400">Tentang</a>
-                <a href="#video-demo" class="hover:text-gold-400">Video</a>
-                <a href="#katalog-kelas" class="hover:text-gold-400">Kelas</a>
-                <button onclick="openRecipeSecretModal('Bumbu Inti Serbaguna')" class="hover:text-gold-400">Bonus Resep</button>
-            </div>
-            <div class="text-xs text-center sm:text-right">
-                &copy; 2026 Manajemen Resmi Chef Kang Encep. Hak Cipta Dilindungi.
-            </div>
-        </div>
-    </footer>
-
-    <!-- INTERACTIVE REGISTRATION / WHATSAPP BOOKING MODAL -->
-    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-cream-50 text-espresso-950 max-w-lg w-full rounded-3xl shadow-2xl border border-gold-500/40 overflow-hidden my-8">
-            <!-- Modal Header -->
-            <div class="bg-espresso-950 text-cream-50 p-6 flex items-center justify-between border-b border-gold-500/20">
-                <div>
-                    <span class="text-[11px] uppercase tracking-widest text-gold-400 font-bold">Formulir Resmi</span>
-                    <h3 class="font-serif text-xl sm:text-2xl font-bold mt-0.5">Pendaftaran & Konsultasi Kelas</h3>
-                </div>
-                <button onclick="closeBookingModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-cream-100 flex items-center justify-center">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <!-- Modal Body Form -->
-            <form id="registration-form" onsubmit="handleRegistrationSubmit(event)" class="p-6 sm:p-7 space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso-800 mb-1.5">Program / Kelas yang Diminati</label>
-                    <select id="form-course" class="w-full bg-white border border-espresso-900/20 rounded-xl px-4 py-3 text-sm font-semibold text-espresso-950 focus:outline-none focus:border-gold-600">
-                        <option value="Masterclass Bumbu Dasar & Masakan Nusantara">Masterclass Bumbu Dasar & Masakan Nusantara (Rp 249.000)</option>
-                        <option value="Rahasia Chinese Food & Masakan Restoran Laris">Rahasia Chinese Food & Masakan Restoran Laris (Rp 349.000)</option>
-                        <option value="Paket Bundling Pengusaha Kuliner & Katering UMKM">Paket Bundling Pengusaha Kuliner & Katering UMKM (Rp 599.000)</option>
-                        <option value="Privat Eksklusif 1-on-1 & Bedah Menu Bersama Kang Encep">Privat Eksklusif 1-on-1 & Bedah Menu Bersama Kang Encep</option>
-                        <option value="Konsultasi & Request Resep Khusus">Konsultasi & Request Resep Khusus</option>
-                    </select>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-espresso-800 mb-1.5">Nama Lengkap Anda</label>
-                        <input type="text" id="form-name" required placeholder="Contoh: Budi Santoso" class="w-full bg-white border border-espresso-900/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-600">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-espresso-800 mb-1.5">Kota Domisili</label>
-                        <input type="text" id="form-city" required placeholder="Contoh: Bandung" class="w-full bg-white border border-espresso-900/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold-600">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso-800 mb-1.5">Tujuan Belajar Utama</label>
-                    <select id="form-goal" class="w-full bg-white border border-espresso-900/20 rounded-xl px-4 py-3 text-sm text-espresso-950 focus:outline-none focus:border-gold-600">
-                        <option value="Memasak untuk Keluarga di Rumah">Memasak Hidangan Lezat untuk Keluarga</option>
-                        <option value="Merintis Usaha Kuliner / Katering Baru">Merintis Usaha Kuliner / Katering Baru</option>
-                        <option value="Upgrade Rasa & Menu Rumah Makan yang Sudah Jalan">Upgrade Rasa & Menu Rumah Makan yang Sudah Jalan</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso-800 mb-1.5">Masakan / Resep yang Paling Ingin Dipelajari dari Kang Encep (Opsional)</label>
-                    <textarea id="form-notes" rows="2" placeholder="Tulis masakan yang ingin Anda pelajari..." class="w-full bg-white border border-espresso-900/20 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-600"></textarea>
-                </div>
-
-                <!-- Dynamic Confirmation Preview Box (Hidden until submit) -->
-                <div id="booking-success-box" class="hidden bg-emerald-950 text-emerald-100 p-4 rounded-2xl border border-emerald-500/40 space-y-3">
-                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
-                        <i class="fa-solid fa-circle-check"></i> Format Pesan Pendaftaran Siap!
-                    </div>
-                    <p id="generated-wa-preview" class="text-xs bg-black/30 p-3 rounded-xl font-mono leading-relaxed text-emerald-100/90"></p>
-                    <div class="flex flex-wrap gap-2">
-                        <a id="direct-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-espresso-950 font-bold text-xs py-2.5 px-4 rounded-xl text-center flex items-center justify-center gap-1.5">
-                            <i class="fa-brands fa-whatsapp text-base"></i> Kirim ke WhatsApp Sekarang
-                        </a>
-                        <button type="button" onclick="copyRegistrationText()" class="bg-white/10 hover:bg-white/20 text-white text-xs font-semibold py-2.5 px-3 rounded-xl">
-                            <i class="fa-regular fa-copy mr-1"></i> Salin Pesan
-                        </button>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-500 text-espresso-950 font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Buat Pesan Pendaftaran WhatsApp</span>
-                    </button>
-                    <p class="text-[11px] text-center text-espresso-700/70 mt-2">
-                        Anda akan terhubung langsung dengan Tim Manajemen Resmi Chef Kang Encep.
-                    </p>
-                </div>
-            </form>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- MODAL INTIP RAHASIA RESEP (RECIPE SECRET MODAL) -->
-    <div id="recipe-secret-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-espresso-900 text-cream-50 max-w-md w-full rounded-3xl p-6 sm:p-7 border border-gold-500/40 shadow-2xl space-y-4">
-            <div class="flex items-center justify-between">
-                <span class="bg-gold-500/20 text-gold-400 text-xs font-bold px-3 py-1 rounded-full border border-gold-500/30">
-                    Catatan Dapur Kang Encep
+  <!-- PROFIL / TENTANG MAESTRO (FOTO 2: chef2) -->
+  <section id="tentang" class="py-16 sm:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Bingkai Foto 2 (chef2) -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative mx-auto max-w-md">
+            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[4/5] bg-sand">
+              <img
+                data-chef-img="chef2"
+                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80"
+                alt="Profil Chef Kang Encep di Dapur"
+                class="w-full h-full object-cover object-[center_20%]"
+              />
+            </div>
+            <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:-right-5 bg-espresso text-cream p-5 rounded-2xl shadow-xl border border-gold/40 max-w-xs">
+              <p class="text-goldLight font-serif font-bold text-lg">Jam Terbang Matang</p>
+              <p class="text-xs text-cream/80 mt-1">Berpengalaman puluhan tahun meracik hidangan Nusantara, Oriental, hingga kontinental di luar kepala.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Narasi Profil -->
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full">Mengenal Sosok Guru Anda</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-espresso leading-snug">
+            Kematangan Usia & Pengalaman yang Menjadi Jaminan Kualitas Rasa
+          </h2>
+          <p class="text-charcoal/80 leading-relaxed">
+            Di usia lebih dari lima dekade, <strong>Chef Kang Encep</strong> telah melewati ribuan jam di depan tungku dapur. Beliau menguasai ratusan formula bumbu dan teknik memasak lintas selera secara mendalam—sesuatu yang hanya bisa lahir dari ketekunan puluhan tahun, bukan sekadar menghafal resep instan dari internet.
+          </p>
+          <p class="text-charcoal/80 leading-relaxed">
+            Kini, beliau mendedikasikan keahliannya sebagai edukator kuliner. Gaya mengajarnya yang kebapakan, sabar, dan sangat detail membuat peserta pemula sekali pun langsung paham mengapa sebuah masakan bisa gurih meresap, empuk sempurna, dan konsisten rasanya.
+          </p>
+
+          <div class="grid sm:grid-cols-3 gap-4 pt-2">
+            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
+              <h4 class="font-bold text-espresso text-sm">Takaran Pasti & Akurat</h4>
+              <p class="text-xs text-charcoal/70 mt-1.5">Intuisi puluhan tahun diterjemahkan menjadi gramasi yang mudah Anda tiru di rumah atau tempat usaha.</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
+              <h4 class="font-bold text-espresso text-sm">Tidak Pelit Ilmu</h4>
+              <p class="text-xs text-charcoal/70 mt-1.5">Semua trik rahasia restoran, cara memilih bahan, hingga koreksi rasa dibuka secara transparan.</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
+              <h4 class="font-bold text-espresso text-sm">Sabar & Membumi</h4>
+              <p class="text-xs text-charcoal/70 mt-1.5">Bebas bertanya dari nol tanpa rasa canggung, dibimbing perlahan sampai benar-benar berhasil.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PEMUTAR VIDEO INTERAKTIF & PLAYLIST MODUL (FOTO 3: chef3) -->
+  <section id="video-demo" class="py-16 sm:py-24 bg-espresso text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-goldLight">Cuplikan Materi & Metode Belajar</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Simak Cuplikan Modul Dapur Kang Encep</h2>
+        <p class="text-cream/75 text-sm sm:text-base mt-3">
+          Pilih salah satu modul di sebelah kanan untuk melihat materi pembelajaran beserta bocoran <strong>Tips Rahasia Kang Encep</strong>.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Area Video Player -->
+        <div class="lg:col-span-8 space-y-5">
+          <div id="videoContainer" class="relative rounded-2xl overflow-hidden bg-charcoal border border-gold/40 shadow-2xl aspect-video group">
+            <!-- Sampul Foto 3 (chef3) -->
+            <img
+              id="videoPosterImg"
+              data-chef-img="chef3"
+              src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=1200&q=80"
+              alt="Demo Memasak Chef Kang Encep"
+              class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition duration-500"
+            />
+            <div id="videoOverlay" class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/45 to-black/25 flex flex-col justify-between p-6 sm:p-8">
+              <div class="flex items-center justify-between">
+                <span id="activeModuleBadge" class="px-3.5 py-1 rounded-full bg-gold text-espresso font-bold text-xs">
+                  Modul Sampel #1
                 </span>
-                <button onclick="closeRecipeSecretModal()" class="text-cream-200/70 hover:text-white">
-                    <i class="fa-solid fa-xmark text-xl"></i>
+                <span id="activeModuleDuration" class="px-3 py-1 rounded-full bg-black/60 text-cream text-xs font-medium">
+                  Durasi: 12:45
+                </span>
+              </div>
+
+              <div class="my-auto mx-auto text-center">
+                <button onclick="putarVideoModul()" class="w-20 h-20 rounded-full gold-gradient text-espresso flex items-center justify-center shadow-2xl hover:scale-110 transition mx-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
                 </button>
+                <p class="text-xs font-semibold uppercase tracking-widest text-goldLight mt-3">Klik untuk Memutar Modul</p>
+              </div>
+
+              <div>
+                <h3 id="activeModuleTitle" class="text-xl sm:text-2xl font-bold text-cream">
+                  Bumbu Dasar Warisan Nusantara
+                </h3>
+                <p id="activeModuleDesc" class="text-xs sm:text-sm text-cream/80 mt-1">
+                  Cara meracik dan menumis bumbu inti merah, putih, dan kuning agar matang tanak, harum semerbak, serta awet berminggu-minggu.
+                </p>
+              </div>
             </div>
-            <h3 id="secret-modal-title" class="font-serif text-2xl font-bold text-gold-400"></h3>
-            <p id="secret-modal-body" class="text-sm text-cream-100/90 leading-relaxed"></p>
-            <div class="pt-2">
-                <button onclick="closeRecipeSecretModal(); openBookingModal('Kelas Resep ' + document.getElementById('secret-modal-title').innerText);" class="w-full bg-gold-500 hover:bg-gold-400 text-espresso-950 font-bold py-3 rounded-xl text-sm">
-                    Pelajari Resep Lengkapnya di Kelas →
-                </button>
+
+            <!-- Tempat Iframe YouTube / Pesan Pratinjau saat diklik -->
+            <div id="videoActiveArea" class="hidden absolute inset-0 bg-espresso flex items-center justify-center p-6 text-center"></div>
+          </div>
+
+          <!-- Kotak Tips Rahasia Kang Encep -->
+          <div class="bg-charcoal border border-gold/30 rounded-2xl p-6 flex flex-col sm:flex-row gap-4 items-start">
+            <div class="w-12 h-12 rounded-xl gold-gradient text-espresso font-bold flex items-center justify-center shrink-0 text-xl">
+              💡
             </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest text-goldLight font-bold">Tips Rahasia Kang Encep pada Modul Ini:</span>
+              <p id="activeModuleTip" class="text-sm sm:text-base text-cream/90 mt-1 leading-relaxed italic">
+                "Kunci bumbu dasar yang awet tanpa pengawet ada pada proses 'tanak'—tumis dengan api kecil hingga kandungan air habis, minyak naik terpisah dari bumbu, dan aromanya tidak lagi langu."
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- Playlist 4 Modul -->
+        <div class="lg:col-span-4 bg-charcoal rounded-2xl border border-white/10 p-5 space-y-3">
+          <h4 class="font-serif text-lg font-bold text-goldLight px-1 pb-2 border-b border-white/10">
+            Daftar Modul Pilihan (4 Video)
+          </h4>
+          <div id="playlistContainer" class="space-y-2.5"></div>
+          <div class="pt-3 border-t border-white/10">
+            <button onclick="bukaModalDaftar('Akses Video Lengkap & Kelas')" class="w-full py-3 rounded-xl gold-gradient text-espresso font-bold text-sm hover:brightness-110 transition">
+              Dapatkan Akses Materi Lengkap
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        // ==========================================
-        // KONFIGURASI NOMOR WHATSAPP ADMIN / PARTNER
-        // Ganti nomor di bawah ini dengan nomor WA Anda (format 628...)
-        // ==========================================
-        const ADMIN_WHATSAPP_NUMBER = "6281234567890";
+  <!-- KATALOG KELAS YANG BISA DIFILTER -->
+  <section id="kelas" class="py-16 sm:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold">Katalog Program Belajar</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-2">Pilih Kelas Sesuai Kebutuhan Anda</h2>
+        <p class="text-charcoal/75 text-sm sm:text-base mt-2">
+          Tersedia untuk belajar masak harian keluarga, persiapan membuka usaha kuliner baru, hingga konsultasi privat langsung bersama Kang Encep.
+        </p>
+      </div>
 
-        // 1. DATA VIDEO PLAYLIST INTERAKTIF
-        const videoModules = [
-            {
-                id: 1,
-                badge: "Modul Unggulan #1",
-                title: "Rahasia 4 Bumbu Dasar Warisan Nusantara (Tahan 3 Bulan)",
-                duration: "18 Menit Full HD",
-                poster: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85",
-                videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-chef-preparing-a-gourmet-dish-41764-large.mp4",
-                desc: "Di video ini, Kang Encep memperlihatkan teknik menumis bumbu dasar putih, merah, kuning, dan oranye hingga mencapai titik 'tanak sempurna'. Dengan teknik ini, bumbu tidak langu, aromanya keluar maksimal, dan awet disimpan berbulan-bulan tanpa bahan pengawet kimia.",
-                tip: "Jangan pernah memasukkan minyak di awal saat menghaluskan cabai dan bawang jika ingin bumbu cepat matang merata. Biarkan kadar air menyusut dulu di wajan panas, baru kunci dengan minyak panas bertahap."
-            },
-            {
-                id: 2,
-                badge: "Teknik Daging #2",
-                title: "Cara Mengempukkan Daging & Meresapkan Bumbu Tanpa Presto",
-                duration: "22 Menit Full HD",
-                poster: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
-                videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-frying-meat-in-a-pan-41760-large.mp4",
-                desc: "Masalah utama memasak rendang, empal, atau semur adalah daging yang keras dan bumbu yang hanya menempel di luar. Kang Encep mempraktikkan teknik pemotongan arah serat dan metode ungkep suhu bertahap yang hemat gas namun menghasilkan daging selembut mentega.",
-                tip: "Gunakan air kelapa tua segar dan parutan nanas muda dengan takaran tepat 15 gram per kilogram daging selama 12 menit, serat daging akan terbuka alami tanpa mengubah rasa asli rempah."
-            },
-            {
-                id: 3,
-                badge: "Rahasia Restoran #3",
-                title: "Teknik Wok Hei & Minyak Bawang Gurih Ala Restoran Bintang 5",
-                duration: "15 Menit Full HD",
-                poster: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=85",
-                videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-cook-tossing-vegetables-in-a-wok-41766-large.mp4",
-                desc: "Mengapa nasi goreng, capcay, dan mie goreng di restoran Chinese Food memiliki aroma asap yang khas dan gurih yang bikin nagih? Semua kuncinya ada pada pembuatan 'Minyak Baceman Bawang' dan manajemen suhu wajan yang dibongkar tuntas di video ini.",
-                tip: "Teteskan kecap ikan dan minyak wijen bukan di tengah masakan, melainkan di pinggir bibir wajan yang sangat panas agar langsung terkaramelisasi menjadi uap harum."
-            },
-            {
-                id: 4,
-                badge: "Manajemen UMKM #4",
-                title: "Standarisasi Gramasi Resep & Hitung HPP untuk Bisnis Kuliner",
-                duration: "25 Menit Full HD",
-                poster: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85",
-                videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-chef-decorating-a-gourmet-dish-with-a-sauce-41765-large.mp4",
-                desc: "Khusus untuk Anda yang ingin membuka katering, warung makan, atau restoran. Kang Encep mengajarkan cara mengubah resep rumah tangga menjadi SOP dapur komersial agar rasa masakan tidak pernah berubah walaupun dimasak oleh asisten dapur.",
-                tip: "Kunci bisnis kuliner yang bertahan puluhan tahun adalah membuat 'Bumbu Premix Kering & Basah' dalam takaran porsi siap pakai, sehingga waktu masak per porsi di bawah 4 menit."
-            }
-        ];
+      <!-- Tombol Filter -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="filterKelasBtns">
+        <button onclick="filterKelas('semua', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-espresso text-goldLight shadow">Semua Program</button>
+        <button onclick="filterKelas('rumahan', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Masakan Rumahan</button>
+        <button onclick="filterKelas('umkm', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Bisnis & UMKM</button>
+        <button onclick="filterKelas('privat', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Privat Eksklusif</button>
+      </div>
 
-        let activeVideoId = 1;
+      <!-- Grid Kartu Kelas -->
+      <div id="gridKelas" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </section>
 
-        function renderPlaylist() {
-            const container = document.getElementById('video-playlist');
-            container.innerHTML = videoModules.map((vid, idx) => {
-                const isActive = vid.id === activeVideoId;
-                return `
-                    <button onclick="selectVideo(${vid.id})" class="w-full text-left p-3.5 rounded-2xl border transition-all flex items-start gap-3.5 ${
-                        isActive 
-                        ? 'bg-gold-500/15 border-gold-500 shadow-lg' 
-                        : 'bg-espresso-900/60 border-white/10 hover:bg-espresso-900 hover:border-white/25'
-                    }">
-                        <div class="relative w-24 h-16 rounded-xl overflow-hidden shrink-0 bg-espresso-800">
-                            <img src="${vid.poster}" alt="${vid.title}" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <span class="w-7 h-7 rounded-full ${isActive ? 'bg-gold-500 text-espresso-950' : 'bg-white/80 text-espresso-950'} flex items-center justify-center text-xs">
-                                    <i class="fa-solid ${isActive ? 'fa-volume-high' : 'fa-play'}"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-center justify-between gap-2">
-                                <span class="text-[10px] font-bold uppercase tracking-wider ${isActive ? 'text-gold-400' : 'text-spice-500'}">${vid.badge}</span>
-                                <span class="text-[10px] text-cream-200/60">${vid.duration.split(' ')[0]} mnt</span>
-                            </div>
-                            <h4 class="font-semibold text-xs sm:text-sm text-cream-50 line-clamp-2 mt-0.5 leading-snug">
-                                ${vid.title}
-                            </h4>
-                        </div>
-                    </button>
-                `;
-            }).join('');
-        }
+  <!-- ENSIKLOPEDIA KEAHLIAN RESEP -->
+  <section id="ensiklopedia" class="py-16 sm:py-24 bg-sand/60 border-t border-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold">Ensiklopedia Keahlian</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-2">Ratusan Resep dalam Genggaman Kang Encep</h2>
+        <p class="text-charcoal/75 text-sm sm:text-base mt-2">
+          Klik kategori masakan di bawah ini, lalu tekan tombol <strong>"Intip Rahasia Kang Encep"</strong> pada setiap hidangan.
+        </p>
+      </div>
 
-        function selectVideo(id) {
-            const selected = videoModules.find(v => v.id === id);
-            if (!selected) return;
-            activeVideoId = id;
+      <!-- Tab Kategori Resep -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="tabResepBtns">
+        <button onclick="gantiKategoriResep('nusantara', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-espresso text-goldLight shadow">Hidangan Nusantara</button>
+        <button onclick="gantiKategoriResep('oriental', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Chinese & Oriental</button>
+        <button onclick="gantiKategoriResep('barat', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Hidangan Barat</button>
+        <button onclick="gantiKategoriResep('bumbu', this)" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold">Bumbu Inti & Sambal</button>
+      </div>
 
-            const videoEl = document.getElementById('main-culinary-video');
-            const sourceEl = document.getElementById('video-source');
-            const overlayEl = document.getElementById('video-overlay');
+      <!-- Grid Resep -->
+      <div id="gridResep" class="grid md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
 
-            // Update video attributes
-            videoEl.pause();
-            videoEl.poster = selected.poster;
-            sourceEl.src = selected.videoUrl;
-            videoEl.load();
+  <!-- AJAKAN PENUTUP (CTA) -->
+  <section class="py-16 bg-espresso text-cream border-t border-gold/30">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+      <h2 class="text-3xl sm:text-4xl font-bold">Siap Belajar Masak Enak atau Membangun Usaha Kuliner?</h2>
+      <p class="text-cream/80 text-sm sm:text-base max-w-2xl mx-auto">
+        Konsultasikan menu atau program belajar yang paling cocok untuk Anda. Tim manajemen Chef Kang Encep siap membantu jadwal kelas privat maupun reguler Anda.
+      </p>
+      <button onclick="bukaModalDaftar('Konsultasi Jadwal & Menu Belajar')" class="gold-gradient text-espresso font-bold px-8 py-4 rounded-full shadow-xl hover:scale-105 transition">
+        Hubungi Manajemen & Daftar via WhatsApp
+      </button>
+    </div>
+  </section>
 
-            // Show overlay again with updated details
-            overlayEl.classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('active-video-badge').innerText = selected.badge;
-            document.getElementById('active-video-duration').innerHTML = `<i class="fa-regular fa-clock mr-1"></i> ${selected.duration}`;
-            document.getElementById('overlay-video-title').innerText = selected.title;
-            document.getElementById('detail-video-title').innerText = selected.title;
-            document.getElementById('detail-video-desc').innerText = selected.desc;
-            document.getElementById('detail-video-tip').innerText = `"${selected.tip}"`;
+  <!-- FOOTER -->
+  <footer class="bg-charcoal text-cream/60 py-8 text-center text-xs border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-serif text-base text-goldLight font-semibold">Dapur Maestro Chef Kang Encep</p>
+      <p class="mt-1">© 2026 Akademi & Kursus Kuliner Chef Kang Encep. Seluruh Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
 
-            renderPlaylist();
-        }
+  <!-- MODAL FORMULIR PENDAFTARAN WHATSAPP -->
+  <div id="modalDaftar" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-cream rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gold/40 relative">
+      <button onclick="tutupModalDaftar()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-sand text-espresso font-bold hover:bg-gold/30 transition">
+        ✕
+      </button>
+      <span class="text-xs font-bold uppercase tracking-widest text-gold">Formulir Pendaftaran Resmi</span>
+      <h3 class="text-2xl font-bold text-espresso mt-1">Daftar Kelas Kang Encep</h3>
+      <p class="text-xs text-charcoal/70 mt-1 mb-5">Isi data singkat berikut, pesan Anda akan terhubung otomatis ke WhatsApp Admin resmi kami.</p>
 
-        function togglePlayVideo() {
-            const videoEl = document.getElementById('main-culinary-video');
-            const overlayEl = document.getElementById('video-overlay');
-            overlayEl.classList.add('opacity-0', 'pointer-events-none');
-            videoEl.play().catch(() => {
-                // Fallback if autoplay blocked
-                overlayEl.classList.remove('opacity-0', 'pointer-events-none');
-            });
-        }
+      <form onsubmit="kirimKeWhatsApp(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-espresso mb-1">Nama Lengkap Anda *</label>
+          <input id="inputNama" type="text" required placeholder="Contoh: Ibu Rina / Bapak Hendra" class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-espresso mb-1">Pilihan Program / Kelas *</label>
+          <input id="inputProgram" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm font-medium focus:outline-none focus:border-gold" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-espresso mb-1">Tujuan Belajar</label>
+          <select id="inputTujuan" class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold">
+            <option value="Membuka / Mengembangkan Usaha Kuliner (UMKM)">Membuka / Mengembangkan Usaha Kuliner (UMKM)</option>
+            <option value="Memasak untuk Keluarga di Rumah">Memasak untuk Keluarga di Rumah</option>
+            <option value="Request Resep Khusus Secara Privat">Request Resep Khusus Secara Privat</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-espresso mb-1">Catatan Masakan yang Ingin Dipelajari (Opsional)</label>
+          <textarea id="inputCatatan" rows="2" placeholder="Misal: Ingin fokus belajar bumbu nasi kebuli & ayam bakar..." class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient text-espresso font-bold text-sm shadow-lg hover:brightness-110 transition">
+          Kirim Pendaftaran ke WhatsApp →
+        </button>
+      </form>
+    </div>
+  </div>
 
-        // Show overlay again if video ends
-        document.addEventListener('DOMContentLoaded', () => {
-            const videoEl = document.getElementById('main-culinary-video');
-            const overlayEl = document.getElementById('video-overlay');
-            videoEl.addEventListener('ended', () => {
-                overlayEl.classList.remove('opacity-0', 'pointer-events-none');
-            });
+  <!-- PENGATURAN DATA & LOGIKA INTERAKTIF -->
+  <script>
+    // =========================================================================
+    // 1. UBAH NOMOR WHATSAPP ADMIN DI SINI (Gunakan awalan 62, tanpa tanda +)
+    // =========================================================================
+    const ADMIN_WHATSAPP_NUMBER = "6281234567890";
+
+    // =========================================================================
+    // 2. PEMUAT OTOMATIS FOTO CHEF (chef1, chef2, chef3) SEMUA EKSTENSI FILE
+    // =========================================================================
+    function muatFotoChefOtomatis() {
+      const daftarEkstensi = [
+        '.jpg', '.jpeg', '.png', '.webp', '.jfif',
+        '.JPG', '.JPEG', '.PNG', '.WEBP', ''
+      ];
+
+      document.querySelectorAll('[data-chef-img]').forEach((imgEl) => {
+        const namaDasar = imgEl.getAttribute('data-chef-img');
+        const namaKapital = namaDasar.charAt(0).toUpperCase() + namaDasar.slice(1);
+        const kandidatFile = [];
+
+        [namaDasar, namaKapital].forEach((nama) => {
+          daftarEkstensi.forEach((eks) => {
+            kandidatFile.push('./' + nama + eks);
+          });
         });
 
-        // 2. DATA ENSIKLOPEDIA KEAHLIAN RESEP (4 KATEGORI)
-        const recipeDatabase = {
-            nusantara: [
-                {
-                    name: "Rendang Daging Hitam Minang Otentik",
-                    region: "Sumatera Barat",
-                    level: "Resep Warisan",
-                    image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80",
-                    secret: "Kunci rendang hitam gurih tanpa gosong ala Kang Encep terletak pada rasio kelapa parut sangrai dan waktu memasukkan santan kental perasan pertama saat kalio mulai pecah minyak."
-                },
-                {
-                    name: "Rawon Nguling & Soto Ambengan Kuah Pekat",
-                    region: "Jawa Timur",
-                    level: "Standar Resto",
-                    image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
-                    secret: "Kang Encep mengajarkan cara memilih dan mengolah kluwek agar tidak pahit serta rahasia koya udang bawang putih yang membuat kuah langsung kental gurih."
-                },
-                {
-                    name: "Ayam Betutu Gilimanuk & Sate Lilit Bali",
-                    region: "Bali & Nusra",
-                    level: "Rempah Lengkap",
-                    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80",
-                    secret: "Menggunakan teknik 'Base Genep' dengan komposisi kencur, lengkuas, dan serai yang dirajang lalu ditumis dengan minyak kelapa murni."
-                },
-                {
-                    name: "Nasi Liwet Sunda & Gepuk Daging Karuhun",
-                    region: "Jawa Barat",
-                    level: "Favorit Katering",
-                    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
-                    secret: "Beras tetap pulen dan harum meski sudah dingin berkat takaran santan encer dan infusi daun kemangi, serai, serta minyak jambal roti."
-                }
-            ],
-            oriental: [
-                {
-                    name: "Bebek & Ayam Panggang Bumbu Hong Kong",
-                    region: "Oriental Klasik",
-                    level: "Kelas Hotel Bintang 5",
-                    image: "https://images.unsplash.com/photo-1518492104633-130d0cc84637?auto=format&fit=crop&w=600&q=80",
-                    secret: "Kulit renyah mengkilap dan daging juicy berkat teknik siraman air maltosa mendidih dan pengeringan sebelum dipanggang."
-                },
-                {
-                    name: "Sapo Tahu Seafood & Capcay Kuah Kental",
-                    region: "Chinese Resto",
-                    level: "Menu Laris",
-                    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
-                    secret: "Sayuran tetap hijau segar dan renyah (tidak layu berair) dengan teknik blanching 15 detik di air minyak sebelum disiram saus tiram racikan."
-                },
-                {
-                    name: "Nasi Goreng XO & Mie Goreng Hokkian",
-                    region: "Street & Resto",
-                    level: "Wok Hei Master",
-                    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80",
-                    secret: "Rahasia bulir nasi yang terpisah, tidak lembek, dan beraroma asap wajan dengan bumbu baceman bawang putih & ebi sangrai."
-                },
-                {
-                    name: "Udang Saus Telur Asin & Ayam Kung Pao",
-                    region: "Modern Oriental",
-                    level: "Favorit Keluarga",
-                    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
-                    secret: "Saus telur asin yang berbusa lembut (foamy) dan gurih creamy tanpa amis menggunakan kuning telur bebek kukus yang diemulsi mentega."
-                }
-            ],
-            western: [
-                {
-                    name: "Tenderloin Steak & 3 Saus Klasik (Mushroom, Blackpepper, BBQ)",
-                    region: "Western Grill",
-                    level: "Fine Dining",
-                    image: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80",
-                    secret: "Membuat saus steak dari kaldu tulang sapi sangrai (demi-glace) buatan sendiri yang hemat biaya namun rasanya setara steakhouse mewah."
-                },
-                {
-                    name: "Pasta Creamy Carbonara, Bolognese & Aglio Olio",
-                    region: "Italia Otentik",
-                    level: "Cafe & Bistro",
-                    image: "https://images.unsplash.com/photo-1621996346565-e3d5d6281298?auto=format&fit=crop&w=600&q=80",
-                    secret: "Teknik emulsi air rebusan pasta dan keju agar saus menempel sempurna di setiap helai spaghetti tanpa pecah atau menggumpal."
-                },
-                {
-                    name: "Roasted Rosemary Chicken & Mashed Potato Lembut",
-                    region: "European",
-                    level: "Hidangan Spesial",
-                    image: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=600&q=80",
-                    secret: "Metode brining (perendaman air garam rempah) semalam yang menjamin dada ayam panggang tetap basah dan berbumbu sampai ke dalam."
-                },
-                {
-                    name: "Zuppa Soup & Cream Soup Jamur Kental Gurih",
-                    region: "Klasik Banquet",
-                    level: "Favorit Katering",
-                    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
-                    secret: "Takaran Roux (mentega & tepung) yang pas sehingga sup krim tidak terasa seperti lem tepung meskipun dipanaskan berulang kali di pemanas katering."
-                }
-            ],
-            bumbu: [
-                {
-                    name: "4 Bumbu Dasar Inti (Putih, Merah, Kuning, Oranye)",
-                    region: "Fondasi Dapur",
-                    level: "Wajib Kuasai",
-                    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80",
-                    secret: "Cukup stok 4 toples bumbu ini di kulkas, Anda bisa memasak lebih dari 80 jenis masakan Indonesia hanya dalam waktu 10 menit."
-                },
-                {
-                    name: "Aneka Sambal Kemasan Tahan Lama (Bawang, Roa, Cumi, Ijo)",
-                    region: "Peluang Bisnis",
-                    level: "Siap Jual Botolan",
-                    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80",
-                    secret: "Teknik sterilisasi botol dan pemasakan suhu rendah agar sambal botolan tidak meledak/berjamur di pengiriman luar kota."
-                },
-                {
-                    name: "Minyak Ayam & Kaldu Bubuk Alami Tanpa MSG",
-                    region: "Rahasia Mie & Kuah",
-                    level: "Rahasia Pedagang",
-                    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
-                    secret: "Ekstraksi lemak kulit ayam dengan bawang putih cincang dan daun bawang yang menjadi kunci kelezatan mie ayam legendaris."
-                },
-                {
-                    name: "Bumbu Oles Bakaran Serbaguna (Ikan, Ayam, Sate, Jagung)",
-                    region: "Bumbu Komersial",
-                    level: "Anti Gagal",
-                    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80",
-                    secret: "Racikan kecap, gula aren cair, mentega, dan rempah halus yang langsung meresap dan menghasilkan karamelisasi harum saat dibakar."
-                }
-            ]
-        };
-
-        function switchRecipeCategory(categoryKey) {
-            // Update tab button styles
-            document.querySelectorAll('.recipe-tab-btn').forEach(btn => {
-                if (btn.dataset.tab === categoryKey) {
-                    btn.className = "recipe-tab-btn bg-espresso-950 text-gold-400 font-bold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-md transition-all";
-                } else {
-                    btn.className = "recipe-tab-btn bg-white text-espresso-800 hover:bg-espresso-900 hover:text-cream-50 font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl border border-espresso-900/10 transition-all";
-                }
-            });
-
-            const items = recipeDatabase[categoryKey] || [];
-            const grid = document.getElementById('recipe-showcase-grid');
-            grid.innerHTML = items.map(item => `
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-espresso-900/10 transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="relative h-48 overflow-hidden bg-espresso-800">
-                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-3 left-3 bg-espresso-950/85 backdrop-blur-sm text-gold-400 text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                                ${item.region}
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-spice-600">${item.level}</span>
-                            <h3 class="font-serif font-bold text-lg text-espresso-950 mt-1 leading-snug">${item.name}</h3>
-                        </div>
-                    </div>
-                    <div class="px-5 pb-5 pt-2">
-                        <button onclick='openRecipeSecretModal(${JSON.stringify(item.name)}, ${JSON.stringify(item.secret)})' class="w-full bg-cream-100 hover:bg-espresso-950 hover:text-gold-400 text-espresso-900 font-bold text-xs py-2.5 px-4 rounded-xl border border-espresso-900/15 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-key text-spice-500"></i> Intip Rahasia Kang Encep
-                        </button>
-                    </div>
-                </div>
-            `).join('');
+        let indeks = 0;
+        function cobaFileBerikutnya() {
+          if (indeks >= kandidatFile.length) return;
+          const urlCoba = kandidatFile[indeks++];
+          const gambarUji = new Image();
+          gambarUji.onload = function () {
+            imgEl.src = urlCoba;
+          };
+          gambarUji.onerror = cobaFileBerikutnya;
+          gambarUji.src = urlCoba;
         }
+        cobaFileBerikutnya();
+      });
+    }
 
-        function openRecipeSecretModal(title, secretText) {
-            document.getElementById('secret-modal-title').innerText = title;
-            document.getElementById('secret-modal-body').innerText = secretText || "Chef Kang Encep mengajarkan takaran gramasi yang presisi, pemilihan bahan baku segar, serta urutan suhu memasak agar hidangan ini selalu berhasil sempurna.";
-            document.getElementById('recipe-secret-modal').classList.remove('hidden');
-        }
+    // =========================================================================
+    // 3. DATA 4 MODUL VIDEO DEMO (Isi youtubeId nanti jika sudah upload YouTube)
+    // =========================================================================
+    const modulVideo = [
+      {
+        judul: "Bumbu Dasar Warisan Nusantara",
+        durasi: "12:45",
+        deskripsi: "Cara meracik dan menumis bumbu inti merah, putih, dan kuning agar matang tanak, harum semerbak, serta awet berminggu-minggu.",
+        tips: "Kunci bumbu dasar yang awet tanpa pengawet ada pada proses 'tanak'—tumis dengan api kecil hingga kandungan air habis, minyak naik terpisah dari bumbu, dan aromanya tidak lagi langu.",
+        youtubeId: "" // Contoh nanti jika sudah ada YouTube: isi kode uniknya misal "dQw4w9WgXcQ"
+      },
+      {
+        judul: "Teknik Daging Empuk Tanpa Presto",
+        durasi: "15:20",
+        deskripsi: "Metode pengolahan daging sapi & kambing agar empuk meresap sampai ke serat terdalam sekaligus hemat gas.",
+        tips: "Iris daging memotong arah serat sebelum dimasak, lalu gunakan teknik ungkep bertahap dengan api kecil dalam panci tertutup rapat agar sari kaldu alami daging tidak mengering.",
+        youtubeId: ""
+      },
+      {
+        judul: "Rahasia Restoran Chinese Food",
+        durasi: "10:15",
+        deskripsi: "Teknik api besar (Wok Hei), urutan memasukkan saus, dan rahasia membuat tumisan sayur tetap hijau renyah mengkilap.",
+        tips: "Panaskan wajan sampai benar-benar berasap tipis sebelum minyak masuk. Tuang kecap ikan atau minyak wijen menyusuri pinggiran wajan panas agar aroma khas restoran langsung keluar.",
+        youtubeId: ""
+      },
+      {
+        judul: "Standarisasi Resep Bisnis UMKM",
+        durasi: "18:30",
+        deskripsi: "Mengubah takaran kira-kira menjadi timbangan gramasi akurat agar rasa masakan usaha Anda konsisten setiap hari.",
+        tips: "Untuk usaha kuliner, haram menggunakan istilah 'garam secukupnya'. Timbang semua bumbu dalam satuan gram supaya meski dimasak asisten dapur, rasanya tetap 100% sama.",
+        youtubeId: ""
+      }
+    ];
 
-        function closeRecipeSecretModal() {
-            document.getElementById('recipe-secret-modal').classList.add('hidden');
-        }
+    let indeksModulAktif = 0;
 
-        // 3. DATA KATALOG PROGRAM KELAS
-        const coursesData = [
-            {
-                id: "nusantara-master",
-                category: "online",
-                badge: "Paling Diminati",
-                title: "Masterclass Bumbu Dasar & 35 Masakan Warisan Nusantara",
-                level: "Pemula - Mahir",
-                duration: "Akses Seumur Hidup • 35 Video HD",
-                price: "Rp 249.000",
-                strikePrice: "Rp 590.000",
-                highlights: [
-                    "Rahasia 4 Bumbu Dasar Tahan 3 Bulan Tanpa Pengawet",
-                    "35 Resep Lengkap (Rendang, Rawon, Soto, Gudeg, Ayam Bakar, dll)",
-                    "E-Book PDF Takaran Gramasi Akurat (Anti-Kira-Kira)",
-                    "Grup Konsultasi & Tanya Jawab Langsung dengan Kang Encep"
-                ]
-            },
-            {
-                id: "resto-umkm",
-                category: "umkm",
-                badge: "Paket Siap Jualan",
-                title: "Paket Bundling Rahasia Restoran, Chinese Food & Katering UMKM",
-                level: "Khusus Bisnis Kuliner",
-                duration: "Akses Seumur Hidup + Modul HPP",
-                price: "Rp 499.000",
-                strikePrice: "Rp 1.200.000",
-                highlights: [
-                    "Teknik Wok Hei, Minyak Bawang & Saus Inti Chinese Resto",
-                    "25 Menu Paling Laris untuk Warung Makan, Resto & Ricebowl",
-                    "Template Excel Perhitungan HPP, Porsi & Harga Jual Menguntungkan",
-                    "SOP Standarisasi Rasa Agar Karyawan Masak Selalu Konsisten"
-                ]
-            },
-            {
-                id: "privat-vip",
-                category: "privat",
-                badge: "Eksklusif VIP",
-                title: "Privat Mentorship 1-on-1 & Bedah Menu Bersama Chef Kang Encep",
-                level: "Privat Tatap Muka / Live Zoom",
-                duration: "Jadwal Fleksibel • Custom Menu",
-                price: "Konsultasi",
-                strikePrice: "Kuota 4 Peserta/Bln",
-                highlights: [
-                    "Bebas Request Resep Masakan Apa Saja yang Ingin Dikuasai",
-                    "Praktik Masak Didampingi Langsung oleh Chef Kang Encep",
-                    "Audit Rasa & Perbaikan Resep untuk Bisnis Kuliner Anda",
-                    "Pendampingan Penuh Sampai Menu Siap Diluncurkan"
-                ]
-            }
-        ];
+    function renderPlaylist() {
+      const container = document.getElementById('playlistContainer');
+      container.innerHTML = modulVideo.map((m, i) => `
+        <button onclick="pilihModul(${i})" class="w-full text-left p-3.5 rounded-xl transition border ${
+          i === indeksModulAktif
+            ? 'bg-gold/20 border-gold text-cream'
+            : 'bg-espresso/60 border-white/5 text-cream/75 hover:border-gold/40'
+        }">
+          <div class="flex items-center justify-between text-[11px] font-semibold text-goldLight mb-1">
+            <span>MODUL #${i + 1}</span>
+            <span>${m.durasi}</span>
+          </div>
+          <p class="font-bold text-sm leading-snug">${m.judul}</p>
+        </button>
+      `).join('');
+    }
 
-        function renderCourses(filterKey = 'all') {
-            const filtered = filterKey === 'all' ? coursesData : coursesData.filter(c => c.category === filterKey);
-            const grid = document.getElementById('courses-grid');
+    function pilihModul(indeks) {
+      indeksModulAktif = indeks;
+      const m = modulVideo[indeks];
+      document.getElementById('activeModuleBadge').textContent = `Modul Sampel #${indeks + 1}`;
+      document.getElementById('activeModuleDuration').textContent = `Durasi: ${m.durasi}`;
+      document.getElementById('activeModuleTitle').textContent = m.judul;
+      document.getElementById('activeModuleDesc').textContent = m.deskripsi;
+      document.getElementById('activeModuleTip').textContent = `"${m.tips}"`;
 
-            grid.innerHTML = filtered.map(course => `
-                <div class="bg-white rounded-3xl border border-espresso-900/15 shadow-xl overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
-                    <div>
-                        <div class="bg-espresso-950 text-cream-50 p-6 border-b border-gold-500/20">
-                            <div class="flex items-center justify-between gap-2 mb-3">
-                                <span class="bg-gold-500 text-espresso-950 text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">
-                                    ${course.badge}
-                                </span>
-                                <span class="text-xs text-cream-200/70">${course.level}</span>
-                            </div>
-                            <h3 class="font-serif text-xl sm:text-2xl font-bold leading-snug text-cream-50">
-                                ${course.title}
-                            </h3>
-                            <div class="mt-3 text-xs text-gold-400 flex items-center gap-2">
-                                <i class="fa-solid fa-film"></i> <span>${course.duration}</span>
-                            </div>
-                        </div>
+      const areaAktif = document.getElementById('videoActiveArea');
+      areaAktif.classList.add('hidden');
+      areaAktif.innerHTML = '';
+      renderPlaylist();
+    }
 
-                        <div class="p-6 space-y-3">
-                            <div class="text-xs font-bold uppercase tracking-wider text-espresso-700">Materi yang Akan Anda Kuasai:</div>
-                            <ul class="space-y-2.5 text-sm text-espresso-800">
-                                ${course.highlights.map(h => `
-                                    <li class="flex items-start gap-2.5">
-                                        <i class="fa-solid fa-circle-check text-spice-500 mt-1 shrink-0"></i>
-                                        <span>${h}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    </div>
+    function putarVideoModul() {
+      const m = modulVideo[indeksModulAktif];
+      const areaAktif = document.getElementById('videoActiveArea');
+      areaAktif.classList.remove('hidden');
 
-                    <div class="p-6 bg-cream-100/70 border-t border-espresso-900/10">
-                        <div class="flex items-baseline justify-between mb-4">
-                            <div>
-                                <span class="text-xs text-espresso-700/70 line-through block">${course.strikePrice}</span>
-                                <span class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950">${course.price}</span>
-                            </div>
-                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-lg">
-                                Garansi Bisa Praktik
-                            </span>
-                        </div>
-                        <button onclick="openBookingModal('${course.title}')" class="w-full bg-espresso-950 hover:bg-spice-600 text-gold-400 hover:text-white font-bold py-3.5 px-5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm shadow-md">
-                            <span>Daftar Program Ini</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
+      if (m.youtubeId && m.youtubeId.trim() !== "") {
+        areaAktif.innerHTML = `
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/${m.youtubeId}?autoplay=1&rel=0"
+            title="${m.judul}" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        `;
+      } else {
+        areaAktif.innerHTML = `
+          <div class="max-w-md space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-goldLight text-xs font-bold">Pratinjau Modul #${indeksModulAktif + 1}</span>
+            <h4 class="font-serif text-2xl font-bold text-cream">${m.judul}</h4>
+            <p class="text-sm text-cream/80">Video rekaman penuh untuk modul ini sedang disiapkan untuk peserta kelas. Hubungi manajemen kami untuk melihat contoh rekaman atau jadwal praktik langsung bersama Chef Kang Encep.</p>
+            <div class="flex flex-wrap justify-center gap-3 pt-2">
+              <button onclick="bukaModalDaftar('Request Video & Kelas: ${m.judul}')" class="gold-gradient text-espresso font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full">
+                Minta Info Modul via WhatsApp
+              </button>
+              <button onclick="pilihModul(${indeksModulAktif})" class="px-4 py-2.5 rounded-full border border-white/20 text-xs text-cream/80 hover:bg-white/10">
+                Kembali ke Sampul
+              </button>
+            </div>
+          </div>
+        `;
+      }
+    }
 
-        function filterCourses(filterKey) {
-            document.querySelectorAll('.course-filter-btn').forEach(btn => {
-                if (btn.dataset.filter === filterKey) {
-                    btn.className = "course-filter-btn bg-espresso-950 text-gold-400 text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-all";
-                } else {
-                    btn.className = "course-filter-btn bg-cream-100 text-espresso-800 hover:bg-espresso-900 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl border border-espresso-900/10 transition-all";
-                }
-            });
-            renderCourses(filterKey);
-        }
+    // =========================================================================
+    // 4. DATA KATALOG KELAS
+    // =========================================================================
+    const daftarKelas = [
+      {
+        kategori: "rumahan",
+        label: "Favorit Keluarga",
+        nama: "Kelas Fondasi Masakan Harian Istimewa",
+        harga: "Rp 350.000",
+        info: "4 Sesi Materi • Resep Lengkap",
+        poin: ["uasai 3 bumbu dasar serbaguna", "12 menu lauk favorit keluarga", "Trik belanja hemat & food prep"]
+      },
+      {
+        kategori: "umkm",
+        label: "Siap Buka Usaha",
+        nama: "Paket Masterclass Kuliner UMKM & Warung Makan",
+        harga: "Rp 950.000",
+        info: "6 Sesi Intensif • Hitung HPP",
+        poin: ["Standarisasi resep takaran gram", "Menu ayam, bebek, soto & sambal laris", "Konsultasi perhitungan modal & harga jual"]
+      },
+      {
+        kategori: "umkm",
+        label: "Kelas Restoran",
+        nama: "Spesialis Chinese Food & Hidangan Oriental Halal",
+        harga: "Rp 850.000",
+        info: "5 Sesi Praktik • Rahasia Saus",
+        poin: ["Racikan minyak bawang & saus tiram inti", "Nasi goreng resto, capcay, fuyunghai, sapo", "Teknik api dan pengentalan kuah"]
+      },
+      {
+        kategori: "privat",
+        label: "1-on-1 Eksklusif",
+        nama: "Pendampingan Privat Bebas Request Resep",
+        harga: "Konsultasi",
+        info: "Jadwal Fleksibel • Tatap Muka / Online",
+        poin: ["Bebas pilih masakan apa pun yang ingin dikuasai", "Dibimbing langsung oleh Chef Kang Encep", "Cocok untuk pemilik kafe, katering & resto"]
+      }
+    ];
 
-        // 4. FAQ ACCORDION
-        function toggleFaq(index) {
-            const content = document.getElementById(`faq-content-${index}`);
-            const icon = document.getElementById(`faq-icon-${index}`);
-            const isHidden = content.classList.contains('hidden');
-            if (isHidden) {
-                content.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                content.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
+    function renderKelas(filter = 'semua') {
+      const grid = document.getElementById('gridKelas');
+      const dataTampil = filter === 'semua' ? daftarKelas : daftarKelas.filter(k => k.kategori === filter);
+      grid.innerHTML = dataTampil.map(k => `
+        <div class="bg-white rounded-3xl p-6 border border-sand shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-gold/15 text-espresso mb-3">${k.label}</span>
+            <h3 class="text-xl font-bold text-espresso leading-snug">${k.nama}</h3>
+            <p class="text-2xl font-serif font-bold text-gold mt-3">${k.harga}</p>
+            <p class="text-xs text-charcoal/60 mb-4">${k.info}</p>
+            <ul class="space-y-2 text-xs sm:text-sm text-charcoal/80 border-t border-sand pt-4">
+              ${k.poin.map(p => `<li class="flex items-start gap-2"><span class="text-gold font-bold">✓</span><span>${p}</span></li>`).join('')}
+            </ul>
+          </div>
+          <button onclick="bukaModalDaftar('${k.nama}')" class="mt-6 w-full py-3 rounded-xl bg-espresso text-goldLight font-semibold text-sm hover:bg-charcoal transition">
+            Daftar Program Ini
+          </button>
+        </div>
+      `).join('');
+    }
 
-        // 5. MODAL PENDAFTARAN & INTEGRASI WHATSAPP
-        function openBookingModal(preselectedCourse) {
-            const modal = document.getElementById('booking-modal');
-            const selectEl = document.getElementById('form-course');
-            document.getElementById('booking-success-box').classList.add('hidden');
+    function filterKelas(kategori, btnEl) {
+      document.querySelectorAll('#filterKelasBtns button').forEach(b => {
+        b.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold";
+      });
+      btnEl.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-espresso text-goldLight shadow";
+      renderKelas(kategori);
+    }
 
-            if (preselectedCourse) {
-                // Check if option exists, else add dynamically
-                let found = false;
-                for (let i = 0; i < selectEl.options.length; i++) {
-                    if (selectEl.options[i].value.toLowerCase().includes(preselectedCourse.toLowerCase().slice(0, 15))) {
-                        selectEl.selectedIndex = i;
-                        found = true;
-                        break;
-                    }
-                }
-                if (!found) {
-                    const newOpt = new Option(preselectedCourse, preselectedCourse, true, true);
-                    selectEl.add(newOpt);
-                }
-            }
-            modal.classList.remove('hidden');
-        }
+    // =========================================================================
+    // 5. ENSIKLOPEDIA KEAHLIAN RESEP
+    // =========================================================================
+    const dataResep = {
+      nusantara: [
+        { nama: "Rendang Daging Hitam Berempah", asal: "Minangkabau", rahasia: "Gunakan santan kelapa tua perasan pertama tanpa air tambahan, dan masukkan daun kunyit serta asam kandis tepat saat santan mulai pecah minyak." },
+        { nama: "Soto Betawi & Soto Kuning Gurih", asal: "Jawa Barat & Jakarta", rahasia: "Rebus jeroan dan daging dengan rempah daun salam-serai-jahe dua kali buang air rebusan pertama, lalu padukan susu evaporasi dan santan di akhir agar kuah tidak pecah." },
+        { nama: "Ayam Bakar Bumbu Rujak & Taliwang", asal: "Jawa & Lombok", rahasia: "Ungkep ayam hingga kuah mengental jadi glasir, lalu oleskan sisa bumbu yang dicampur sedikit minyak kelapa murni saat dibakar di atas arang." }
+      ],
+      oriental: [
+        { nama: "Nasi Goreng Hongkong & Yangzhou", asal: "Oriental Klasik", rahasia: "Wajib memakai nasi pera yang sudah didinginkan semalaman, dan masak telur setengah matang terlebih dahulu sebelum nasi masuk agar setiap bulir terbungkus sempurna." },
+        { nama: "Ayam Kungpao & Saus Mentega", asal: "Chinese Resto", rahasia: "Lapisi potongan ayam dengan sedikit putih telur dan tepung maizena (teknik velveting) sebelum digoreng sebentar supaya bagian dalam ayam tetap sangat juicy." },
+        { nama: "Sapo Tahu Seafood Kuah Kental", asal: "Oriental", rahasia: "Goreng egg tofu dalam minyak panas yang banyak hingga berkulit keemasan agar tidak hancur saat dimasak bersama kaldu ayam dan saus tiram." }
+      ],
+      barat: [
+        { nama: "Beef Steak Mushroom & Blackpepper Sauce", asal: "Western Grill", rahasia: "Keringkan permukaan daging dengan tisu dapur sebelum menyentuh pan panas, lalu istirahatkan (resting) daging 5 menit setelah matang agar jus gurihnya tidak keluar saat dipotong." },
+        { nama: "Creamy Pasta Carbonara & Bolognese", asal: "Italia Klasik", rahasia: "Saus daging Bolognese sejati dimasak perlahan minimal 90 menit dengan tomat dan susu segar sedikit demi sedikit hingga rasa asam tomat berubah manis gurih alami." },
+        { nama: "Crispy Chicken Cordon Bleu", asal: "Kontinental", rahasia: "Bekukan gulungan ayam berisi keju di freezer selama 25 menit sebelum dibalur tepung roti agar keju meleleh di dalam tanpa bocor saat digoreng." }
+      ],
+      bumbu: [
+        { nama: "Minyak Bawang Gurih Serbaguna", asal: "Rahasia Dapur Utama", rahasia: "Cincang bawang putih dan kulit ayam, masak dari kondisi minyak masih dingin dengan api sangat kecil, lalu matikan api saat warna bawang baru kuning pucat." },
+        { nama: "Sambal Bawang & Sambal Korek Tahan Lama", asal: "Nusantara", rahasia: "Jangan tambahkan air sama sekali; siram ulekan cabai dan bawang dengan minyak jelantah bersih bekas menggoreng ayam yang benar-benar mendidih." },
+        { nama: "Kaldu Ayam & Sapi Pekat Alami", asal: "Fondasi Kuah", rahasia: "Panggang tulang sapi atau rangka ayam di oven/wajan kering hingga kecokelatan sebelum direbus perlahan bersama bawang bombay dan batang seledri." }
+      ]
+    };
 
-        function closeBookingModal() {
-            document.getElementById('booking-modal').classList.add('hidden');
-        }
+    function renderResep(kategori = 'nusantara') {
+      const grid = document.getElementById('gridResep');
+      grid.innerHTML = dataResep[kategori].map((r, idx) => `
+        <div class="bg-white rounded-2xl p-6 border border-sand shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-gold">${r.asal}</span>
+            <h4 class="text-lg font-bold text-espresso mt-1">${r.nama}</h4>
+          </div>
+          <div class="mt-4">
+            <button onclick="toggleRahasia('rahasia-${kategori}-${idx}')" class="text-xs font-bold text-espresso bg-sand/80 hover:bg-gold/25 px-4 py-2 rounded-lg transition w-full">
+              🔍 Intip Rahasia Kang Encep
+            </button>
+            <div id="rahasia-${kategori}-${idx}" class="hidden mt-3 p-3.5 rounded-xl bg-espresso text-cream text-xs leading-relaxed border border-gold/40">
+              <strong class="text-goldLight block mb-1">Catatan Dapur Kang Encep:</strong>
+              ${r.rahasia}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
 
-        let lastGeneratedMessage = "";
+    function toggleRahasia(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
 
-        function handleRegistrationSubmit(e) {
-            e.preventDefault();
-            const course = document.getElementById('form-course').value;
-            const name = document.getElementById('form-name').value.trim();
-            const city = document.getElementById('form-city').value.trim();
-            const goal = document.getElementById('form-goal').value;
-            const notes = document.getElementById('form-notes').value.trim() || "-";
+    function gantiKategoriResep(kategori, btnEl) {
+      document.querySelectorAll('#tabResepBtns button').forEach(b => {
+        b.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-charcoal border border-sand hover:border-gold";
+      });
+      btnEl.className = "px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-espresso text-goldLight shadow";
+      renderResep(kategori);
+    }
 
-            lastGeneratedMessage = `Halo Tim Manajemen *Chef Kang Encep*, saya ingin mendaftar / berkonsultasi:\n\n` +
-                `• *Nama:* ${name}\n` +
-                `• *Domisili:* ${city}\n` +
-                `• *Program Pilihan:* ${course}\n` +
-                `• *Tujuan Belajar:* ${goal}\n` +
-                `• *Request Resep:* ${notes}\n\n` +
-                `Mohon informasi jadwal dan langkah pendaftaran selanjutnya. Terima kasih!`;
+    // =========================================================================
+    // 6. MODAL PENDAFTARAN WHATSAPP
+    // =========================================================================
+    function bukaModalDaftar(namaProgram) {
+      document.getElementById('inputProgram').value = namaProgram;
+      document.getElementById('modalDaftar').classList.remove('hidden');
+    }
 
-            const encodedMsg = encodeURIComponent(lastGeneratedMessage);
-            const waUrl = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${encodedMsg}`;
+    function tutupModalDaftar() {
+      document.getElementById('modalDaftar').classList.add('hidden');
+    }
 
-            document.getElementById('generated-wa-preview').innerText = lastGeneratedMessage;
-            document.getElementById('direct-wa-link').href = waUrl;
-            document.getElementById('booking-success-box').classList.remove('hidden');
-        }
+    function kirimKeWhatsApp(e) {
+      e.preventDefault();
+      const nama = document.getElementById('inputNama').value.trim();
+      const program = document.getElementById('inputProgram').value.trim();
+      const tujuan = document.getElementById('inputTujuan').value;
+      const catatan = document.getElementById('inputCatatan').value.trim();
 
-        function copyRegistrationText() {
-            if (!lastGeneratedMessage) return;
-            const tempInput = document.createElement('textarea');
-            tempInput.value = lastGeneratedMessage;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-        }
+      const teksPesan = [
+        `Halo Manajemen *Chef Kang Encep*, saya ingin mendaftar/konsultasi kelas kuliner:`,
+        ``,
+        `• *Nama:* ${nama}`,
+        `• *Program:* ${program}`,
+        `• *Tujuan Belajar:* ${tujuan}`,
+        catatan ? `• *Catatan Menu:* ${catatan}` : ``,
+        ``,
+        `Mohon informasi jadwal dan langkah selanjutnya. Terima kasih!`
+      ].filter(Boolean).join('\n');
 
-        // Mobile Navigation Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
-            menu.classList.toggle('hidden');
-            icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars text-2xl' : 'fa-solid fa-xmark text-2xl';
-        });
+      const urlWA = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${encodeURIComponent(teksPesan)}`;
+      window.open(urlWA, '_blank');
+      tutupModalDaftar();
+    }
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-                document.getElementById('mobile-menu-icon').className = 'fa-solid fa-bars text-2xl';
-            });
-        });
-
-        // Initialize Page Content
-        window.onload = function () {
-            renderPlaylist();
-            switchRecipeCategory('nusantara');
-            renderCourses('all');
-        };
-    </script>
+    // Jalankan saat halaman dibuka
+    document.addEventListener('DOMContentLoaded', () => {
+      muatFotoChefOtomatis();
+      renderPlaylist();
+      renderKelas('semua');
+      renderResep('nusantara');
+    });
+  </script>
 </body>
 </html>
