@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dapur Kang Encep — Mentor & Praktisi Kuliner Senior</title>
+  <title>Dapur Kang Encep — Praktisi & Mentor Kuliner Nusantara</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
 </head>
 <body class="antialiased selection:bg-gold selection:text-espresso">
 
-  <!-- Navigasi -->
+  <!-- Navigasi Sederhana -->
   <header class="sticky top-0 z-40 bg-espresso/95 backdrop-blur-md border-b border-gold/20 text-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
@@ -45,84 +45,53 @@
         </div>
         <div>
           <span class="block font-serif text-lg sm:text-xl font-bold tracking-wide text-cream">Dapur Kang Encep</span>
-          <span class="block text-[11px] uppercase tracking-widest text-goldLight">Mentor & Praktisi Kuliner</span>
+          <span class="block text-[11px] uppercase tracking-widest text-goldLight">Praktisi Kuliner</span>
         </div>
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cream/80">
-        <a href="#tentang" class="hover:text-goldLight transition">Sosok Kang Encep</a>
-        <a href="#video-demo" class="hover:text-goldLight transition">Cuplikan Bimbingan</a>
-        <a href="#kelas" class="hover:text-goldLight transition">Program Bimbingan</a>
+        <a href="#tentang" class="hover:text-goldLight transition">Profil</a>
+        <a href="#video-bimbingan" class="hover:text-goldLight transition">Video Bimbingan</a>
+        <a href="#program" class="hover:text-goldLight transition">Program UMKM</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <button onclick="bukaModalDaftar('Konsultasi Bimbingan')" class="gold-gradient text-espresso font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-full shadow-lg hover:brightness-110 transition">
-          Konsultasi Sekarang
+        <button onclick="bukaModal()" class="px-4 py-2 text-xs sm:text-sm font-semibold border border-gold/50 text-goldLight rounded-full hover:bg-gold/10 transition">
+          Hubungi Kami
         </button>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION (FOTO 1) -->
-  <section class="relative bg-espresso text-cream overflow-hidden py-14 sm:py-24 border-b border-gold/20">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C89B3C_1px,transparent_1px)] [background-size:24px_24px]"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+  <section class="relative bg-espresso text-cream py-16 sm:py-24 border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         
-        <!-- Teks Utama -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="space-y-6">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-goldLight text-xs font-semibold tracking-wider uppercase">
-            <span>★ 11 Tahun Pengalaman Hotel Bintang 5 Internasional</span>
+            <span>★ Bimbingan Praktik Lapangan</span>
           </div>
-          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-bold leading-tight text-cream">
-            Belajar Langsung dari <span class="text-goldLight italic">Praktisi Sejati,</span> Bukan Sekadar Teori.
+          <h1 class="text-3xl sm:text-5xl font-bold leading-tight text-cream">
+            Belajar Resep Komersial Langsung dari <span class="text-goldLight italic">Praktisinya.</span>
           </h1>
-          <p class="text-base sm:text-lg text-cream/80 leading-relaxed max-w-2xl">
-            Dibimbing langsung oleh <strong>Kang Encep</strong>—mentor kuliner dengan rekam jejak panjang di dapur hotel bintang 5 Singapura dan Malaysia. Kuasai rahasia <strong>Masakan Nusantara, Chinese Food, dan Menu Usaha (UMKM)</strong> secara detail tanpa ada yang ditutup-tutupi.
+          <p class="text-base sm:text-lg text-cream/80 leading-relaxed">
+            Dibimbing langsung oleh <strong>Kang Encep</strong>—praktisi kuliner spesialis Masakan Nusantara dan menu usaha (UMKM). Temukan rahasia membuat bakso kenyal berkulit, bakmi wangi, hingga aneka masakan rumahan dengan rasa otentik dan takaran pasti.
           </p>
 
-          <div class="flex flex-wrap gap-4 pt-2">
-            <button onclick="bukaModalDaftar('Pendaftaran Bimbingan Kuliner')" class="gold-gradient text-espresso font-bold px-7 py-4 rounded-full shadow-xl hover:scale-[1.02] transition">
-              Mulai Bimbingan Bersama Kang Encep
+          <div class="pt-4">
+            <button onclick="bukaModal()" class="gold-gradient text-espresso font-bold px-8 py-4 rounded-full shadow-xl hover:scale-105 transition w-full sm:w-auto">
+              Mulai Bimbingan Sekarang
             </button>
-            <a href="#video-demo" class="px-7 py-4 rounded-full border border-gold/50 text-goldLight font-semibold hover:bg-gold/10 transition flex items-center gap-2">
-              <span>▶</span> Lihat Video Praktik Lapangan
-            </a>
-          </div>
-
-          <!-- Statistik Keunggulan -->
-          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-xl">
-            <div>
-              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">11+ Thn</p>
-              <p class="text-xs sm:text-sm text-cream/70">Pengalaman Internasional</p>
-            </div>
-            <div>
-              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">Bintang 5</p>
-              <p class="text-xs sm:text-sm text-cream/70">Standar Kualitas Rasa</p>
-            </div>
-            <div>
-              <p class="font-serif text-2xl sm:text-3xl font-bold text-goldLight">100%</p>
-              <p class="text-xs sm:text-sm text-cream/70">Bimbingan Praktik Nyata</p>
-            </div>
           </div>
         </div>
 
-        <!-- Bingkai Foto 1 -->
-        <div class="lg:col-span-5">
-          <div class="relative mx-auto max-w-md">
-            <div class="absolute -inset-3 rounded-3xl gold-gradient opacity-25 blur-lg"></div>
-            <div class="relative rounded-3xl overflow-hidden border-2 border-gold/60 bg-charcoal shadow-2xl aspect-[4/5]">
-              <img
-                data-photo-file="chef1"
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80"
-                alt="Kang Encep - Mentor Kuliner"
-                class="w-full h-full object-cover object-[center_18%]"
-              />
-              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso via-espresso/80 to-transparent p-6 pt-16">
-                <p class="text-goldLight text-xs font-semibold uppercase tracking-widest">Mentor & Praktisi Kuliner</p>
-                <p class="font-serif text-2xl font-bold text-cream">Kang Encep</p>
-                <p class="text-xs text-cream/80 mt-1">"Bimbingan dapur yang sesungguhnya ada pada ketepatan teknik dan pengalaman lapangan."</p>
-              </div>
+        <div class="relative mx-auto max-w-sm">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-gold/60 bg-charcoal shadow-2xl aspect-[4/5]">
+            <img data-photo-file="chef1" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" alt="Kang Encep" class="w-full h-full object-cover object-[center_18%]" />
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso via-espresso/80 to-transparent p-6 pt-16">
+              <p class="text-goldLight text-xs font-semibold uppercase tracking-widest">Mentor & Pakar Rasa</p>
+              <p class="font-serif text-2xl font-bold text-cream">Kang Encep</p>
             </div>
           </div>
         </div>
@@ -131,351 +100,183 @@
     </div>
   </section>
 
-  <!-- PROFIL / TENTANG SOSOK GURU (FOTO 2) -->
+  <!-- PROFIL SEDERHANA (FOTO 2) -->
   <section id="tentang" class="py-16 sm:py-24 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         
-        <!-- Bingkai Foto 2 -->
-        <div class="lg:col-span-5 order-2 lg:order-1">
-          <div class="relative mx-auto max-w-md">
-            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[4/5] bg-sand">
-              <img
-                data-photo-file="chef2"
-                src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=900&q=80"
-                alt="Profil Kang Encep di Dapur"
-                class="w-full h-full object-cover object-[center_20%]"
-              />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:-right-5 bg-espresso text-cream p-5 rounded-2xl shadow-xl border border-gold/40 max-w-xs">
-              <p class="text-goldLight font-serif font-bold text-lg">Hotel Bintang 5</p>
-              <p class="text-xs text-cream/80 mt-1">5 Tahun di Singapura & 6 Tahun di Malaysia, meracik standar kuliner tingkat tinggi.</p>
-            </div>
+        <div class="order-2 lg:order-1 relative mx-auto max-w-sm">
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[4/5] bg-sand">
+            <img data-photo-file="chef2" src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=900&q=80" alt="Kang Encep di Dapur" class="w-full h-full object-cover object-[center_20%]" />
           </div>
         </div>
 
-        <!-- Narasi Profil -->
-        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
-          <span class="text-xs font-bold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full">Mengenal Sosok Kang Encep</span>
+        <div class="order-1 lg:order-2 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full">Keahlian Lapangan</span>
           <h2 class="text-3xl sm:text-4xl font-bold text-espresso leading-snug">
-            Tempaan Dapur Profesional di Singapura dan Malaysia
+            Ilmu Kuliner Nyata yang Teruji untuk Usaha
           </h2>
-          <p class="text-charcoal/80 leading-relaxed">
-            Keahlian <strong>Kang Encep</strong> tidak lahir dari sekadar hobi. Beliau telah menghabiskan 11 tahun masa karir profesionalnya di dapur hotel bintang 5 internasional—<strong>5 tahun di Singapura dan 6 tahun di Malaysia</strong>.
+          <p class="text-charcoal/80 leading-relaxed text-lg">
+            <strong>Kang Encep</strong> adalah praktisi kuliner yang mendedikasikan waktunya untuk terjun langsung membimbing para pelaku usaha. Keahlian beliau terletak pada penguasaan resep-resep Nusantara dan oriental yang telah disesuaikan untuk skala komersial (UMKM).
           </p>
           <p class="text-charcoal/80 leading-relaxed">
-            Spesialisasinya mencakup kekayaan <strong>Masakan Nusantara, keautentikan Chinese Food, hingga Masakan Rumahan</strong>. Kini, melalui layanan bimbingan offline, Kang Encep mendedikasikan ilmu tingginya untuk membantu para pelaku UMKM dan masyarakat umum meracik resep bernilai jual tinggi, mulai dari olahan bakso komersial yang kenyal hingga bakmi halal khas Cina.
+            Tidak ada teori yang rumit. Di setiap bimbingannya, Kang Encep mengajarkan takaran pasti, pemilihan bahan baku lokal yang tepat, hingga teknik memasak yang efisien. Gaya membimbingnya yang sabar dan bersahabat memastikan setiap peserta—bahkan pemula sekalipun—bisa menghasilkan masakan dengan cita rasa konsisten.
           </p>
-
-          <div class="grid sm:grid-cols-3 gap-4 pt-2">
-            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
-              <h4 class="font-bold text-espresso text-sm">Standar Internasional</h4>
-              <p class="text-xs text-charcoal/70 mt-1.5">Teknik memasak, kebersihan, dan konsistensi rasa yang dibawa langsung dari standar hotel bintang 5.</p>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
-              <h4 class="font-bold text-espresso text-sm">Spesialis Usaha</h4>
-              <p class="text-xs text-charcoal/70 mt-1.5">Mampu membimbing peracikan menu UMKM ekonomis tanpa mengorbankan kualitas rasa dan tekstur.</p>
-            </div>
-            <div class="bg-white p-5 rounded-2xl border border-sand shadow-sm">
-              <h4 class="font-bold text-espresso text-sm">Praktik Lapangan</h4>
-              <p class="text-xs text-charcoal/70 mt-1.5">Belajar langsung di tempat Anda, praktik membuat racikan secara real-time sampai berhasil.</p>
-            </div>
-          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- PEMUTAR VIDEO INTERAKTIF YOUTUBE (FOTO 3) -->
-  <section id="video-demo" class="py-16 sm:py-24 bg-espresso text-cream">
+  <!-- VIDEO JEJER (TIDAK PERLU KLIK) -->
+  <section id="video-bimbingan" class="py-16 sm:py-24 bg-espresso text-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-widest text-goldLight">Cuplikan Bimbingan Langsung</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Bimbingan Lapangan Bersama Kang Encep</h2>
-        <p class="text-cream/75 text-sm sm:text-base mt-3">
-          Tonton video di bawah ini untuk melihat langsung bagaimana Kang Encep membagikan ilmunya secara langsung di lokasi usaha (UMKM) peserta.
-        </p>
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-goldLight">Bukti Lapangan</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Cuplikan Bimbingan Langsung</h2>
+        <p class="text-cream/75 mt-3">Tonton bagaimana Kang Encep mempraktikkan langsung ilmu kulinernya bersama para pelaku usaha.</p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <!-- Area Video Player -->
-        <div class="lg:col-span-8 space-y-5">
-          <div id="videoContainer" class="relative rounded-2xl overflow-hidden bg-charcoal border border-gold/40 shadow-2xl aspect-video group">
-            
-            <!-- Tempat Iframe YouTube AKTIF di Sini -->
-            <div id="videoActiveArea" class="absolute inset-0 bg-espresso flex items-center justify-center">
-                <!-- Video pertama akan otomatis dimuat di sini oleh JavaScript -->
-            </div>
+      <!-- Grid 3 Video YouTube Shorts (Vertikal) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Video 1 -->
+        <div class="bg-charcoal rounded-2xl p-4 border border-gold/20 shadow-lg">
+          <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden mb-4">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/uMvpXgbJH_8?rel=0" title="Bimbingan Usaha Bakso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
-          <!-- Kotak Tips Rahasia Kang Encep -->
-          <div class="bg-charcoal border border-gold/30 rounded-2xl p-6 flex flex-col sm:flex-row gap-4 items-start">
-            <div class="w-12 h-12 rounded-xl gold-gradient text-espresso font-bold flex items-center justify-center shrink-0 text-xl">
-              💡
-            </div>
-            <div>
-              <span class="text-xs uppercase tracking-widest text-goldLight font-bold">Catatan Bimbingan:</span>
-              <p id="activeModuleTip" class="text-sm sm:text-base text-cream/90 mt-1 leading-relaxed italic">
-                <!-- Teks tips otomatis -->
-              </p>
-            </div>
-          </div>
+          <h3 class="text-lg font-bold text-goldLight">Praktik Bakso di Rembang</h3>
+          <p class="text-sm text-cream/70 mt-2">Bimbingan pembuatan bakso ekonomis dengan takaran pasti (ayam 3kg, sapi 1kg). Hasil garing dan kenyal.</p>
         </div>
 
-        <!-- Playlist Modul (Kini Hanya 3 Video Nyata Anda) -->
-        <div class="lg:col-span-4 bg-charcoal rounded-2xl border border-white/10 p-5 space-y-3">
-          <h4 class="font-serif text-lg font-bold text-goldLight px-1 pb-2 border-b border-white/10">
-            Daftar Video Bimbingan
-          </h4>
-          <div id="playlistContainer" class="space-y-2.5"></div>
-          <div class="pt-3 border-t border-white/10">
-            <button onclick="bukaModalDaftar('Tanya Jadwal Bimbingan Lapangan')" class="w-full py-3 rounded-xl gold-gradient text-espresso font-bold text-sm hover:brightness-110 transition">
-              Konsultasi Jadwal Bimbingan
-            </button>
+        <!-- Video 2 -->
+        <div class="bg-charcoal rounded-2xl p-4 border border-gold/20 shadow-lg">
+          <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden mb-4">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Q0DHTTG9mxU?rel=0" title="Bimbingan Bakmi Halal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+          <h3 class="text-lg font-bold text-goldLight">Pembuatan Bakmi Halal</h3>
+          <p class="text-sm text-cream/70 mt-2">Bimbingan offline di Jakarta. Proses ekstraksi kaldu dan minyak ayam kampung wangi untuk bakmi otentik.</p>
         </div>
+
+        <!-- Video 3 -->
+        <div class="bg-charcoal rounded-2xl p-4 border border-gold/20 shadow-lg">
+          <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden mb-4">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/XGxVTmUmgYc?rel=0" title="Review Tekstur Bakso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class="text-lg font-bold text-goldLight">Review Tekstur Bakso</h3>
+          <p class="text-sm text-cream/70 mt-2">Melihat langsung hasil tekstur bakso racikan Kang Encep yang berserat, membal, dan 'berkulit' sempurna.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- KATALOG BIMBINGAN YANG BISA DIFILTER -->
-  <section id="kelas" class="py-16 sm:py-24 bg-cream">
+  <!-- PROGRAM KELAS SEDERHANA -->
+  <section id="program" class="py-16 sm:py-24 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs font-bold uppercase tracking-widest text-gold">Program Bimbingan</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-2">Materi Bimbingan Unggulan</h2>
-        <p class="text-charcoal/75 text-sm sm:text-base mt-2">
-          Kang Encep siap hadir ke lokasi Anda untuk bimbingan offline pembuatan menu usaha komersial yang terstandarisasi.
-        </p>
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold">Layanan Kami</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-2">Fokus Bimbingan Utama</h2>
       </div>
 
-      <!-- Grid Kartu Kelas -->
-      <div id="gridKelas" class="grid md:grid-cols-3 gap-6"></div>
-    </div>
-  </section>
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-3xl border border-sand shadow-sm text-center">
+          <div class="w-14 h-14 mx-auto bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl font-bold mb-4">🍲</div>
+          <h3 class="text-xl font-bold text-espresso">Bimbingan Usaha Bakso</h3>
+          <p class="text-sm text-charcoal/70 mt-3">Mengupas tuntas racikan bakso komersial, perhitungan HPP, pengenyal aman, hingga teknik rebusan air es.</p>
+        </div>
 
-  <!-- AJAKAN PENUTUP (CTA) -->
-  <section class="py-16 bg-espresso text-cream border-t border-gold/30">
-    <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Siap Mengembangkan Usaha Kuliner Anda?</h2>
-      <p class="text-cream/80 text-sm sm:text-base max-w-2xl mx-auto">
-        Jadikan usaha makanan Anda lebih kompetitif dengan racikan resep standar hotel namun dengan biaya yang masuk akal. Tim manajemen Dapur Kang Encep siap membantu.
-      </p>
-      <button onclick="bukaModalDaftar('Konsultasi Bimbingan & Undangan Kang Encep')" class="gold-gradient text-espresso font-bold px-8 py-4 rounded-full shadow-xl hover:scale-105 transition">
-        Hubungi Manajemen & Daftar via WhatsApp
-      </button>
+        <div class="bg-white p-6 rounded-3xl border border-sand shadow-sm text-center">
+          <div class="w-14 h-14 mx-auto bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl font-bold mb-4">🍜</div>
+          <h3 class="text-xl font-bold text-espresso">Bakmi Halal & Oriental</h3>
+          <p class="text-sm text-charcoal/70 mt-3">Praktik pembuatan mie, racikan minyak ayam wangi, kuah kaldu, dan bumbu siram khas rumah makan.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-sand shadow-sm text-center">
+          <div class="w-14 h-14 mx-auto bg-gold/10 rounded-full flex items-center justify-center text-gold text-2xl font-bold mb-4">🤝</div>
+          <h3 class="text-xl font-bold text-espresso">Pendampingan Privat (Request)</h3>
+          <p class="text-sm text-charcoal/70 mt-3">Bimbingan khusus menu Nusantara lainnya sesuai permintaan Anda, langsung datang ke lokasi usaha.</p>
+        </div>
+
+      </div>
+
+      <!-- Tombol tunggal untuk seluruh layanan -->
+      <div class="mt-12 text-center">
+        <button onclick="bukaModal()" class="gold-gradient text-espresso font-bold px-10 py-4 rounded-full shadow-lg hover:scale-105 transition">
+          Jadwalkan Bimbingan Anda
+        </button>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="bg-charcoal text-cream/60 py-8 text-center text-xs border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4">
-      <p class="font-serif text-base text-goldLight font-semibold">Dapur Kuliner Kang Encep</p>
-      <p class="mt-1">© 2026 Bimbingan Memasak Kang Encep. Seluruh Hak Cipta Dilindungi.</p>
+      <p class="font-serif text-base text-goldLight font-semibold">Dapur Kang Encep</p>
+      <p class="mt-1">© 2026 Bimbingan Kuliner Nusantara. Seluruh Hak Cipta Dilindungi.</p>
     </div>
   </footer>
 
-  <!-- MODAL FORMULIR PENDAFTARAN WHATSAPP -->
-  <div id="modalDaftar" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+  <!-- MODAL FORMULIR WHATSAPP SEDERHANA -->
+  <div id="modalKontak" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-cream rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gold/40 relative">
-      <button onclick="tutupModalDaftar()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-sand text-espresso font-bold hover:bg-gold/30 transition">
-        ✕
-      </button>
-      <span class="text-xs font-bold uppercase tracking-widest text-gold">Formulir Kontak Resmi</span>
-      <h3 class="text-2xl font-bold text-espresso mt-1">Konsultasi Bimbingan</h3>
-      <p class="text-xs text-charcoal/70 mt-1 mb-5">Isi data singkat berikut, pesan Anda akan terhubung otomatis ke WhatsApp Admin resmi kami.</p>
+      <button onclick="tutupModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-sand text-espresso font-bold hover:bg-gold/30 transition">✕</button>
+      <h3 class="text-2xl font-bold text-espresso mb-1">Hubungi Kang Encep</h3>
+      <p class="text-xs text-charcoal/70 mb-5">Pesan akan dikirim langsung ke WhatsApp manajemen kami.</p>
 
-      <form onsubmit="kirimKeWhatsApp(event)" class="space-y-4">
+      <form onsubmit="kirimWA(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-espresso mb-1">Nama Lengkap Anda *</label>
-          <input id="inputNama" type="text" required placeholder="Contoh: Bapak Hendra" class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold" />
+          <label class="block text-xs font-semibold text-espresso mb-1">Nama Anda *</label>
+          <input id="waNama" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:border-gold outline-none" />
         </div>
         <div>
-          <label class="block text-xs font-semibold text-espresso mb-1">Topik Bimbingan *</label>
-          <input id="inputProgram" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm font-medium focus:outline-none focus:border-gold" />
+          <label class="block text-xs font-semibold text-espresso mb-1">Materi yang Ingin Dipelajari *</label>
+          <input id="waMateri" type="text" placeholder="Misal: Bakso / Bakmi / Lainnya" required class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:border-gold outline-none" />
         </div>
         <div>
-          <label class="block text-xs font-semibold text-espresso mb-1">Domisili / Lokasi Bimbingan</label>
-          <input id="inputLokasi" type="text" required placeholder="Contoh: Jakarta Barat, Rembang, dll." class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold" />
+          <label class="block text-xs font-semibold text-espresso mb-1">Kota / Lokasi Anda *</label>
+          <input id="waLokasi" type="text" required class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:border-gold outline-none" />
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-espresso mb-1">Catatan Tambahan (Opsional)</label>
-          <textarea id="inputCatatan" rows="2" placeholder="Misal: Ingin fokus bimbingan bakso komersial harga Rp 15rb..." class="w-full px-4 py-2.5 rounded-xl border border-sand bg-white text-sm focus:outline-none focus:border-gold"></textarea>
-        </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient text-espresso font-bold text-sm shadow-lg hover:brightness-110 transition">
-          Kirim Pesan ke WhatsApp →
+        <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient text-espresso font-bold text-sm hover:brightness-110 transition mt-2">
+          Kirim via WhatsApp
         </button>
       </form>
     </div>
   </div>
 
-  <!-- PENGATURAN DATA & LOGIKA INTERAKTIF -->
   <script>
-    // =========================================================================
-    // 1. UBAH NOMOR WHATSAPP ADMIN DI SINI (Gunakan awalan 62, tanpa tanda +)
-    // =========================================================================
-    const ADMIN_WHATSAPP_NUMBER = "6281234567890";
+    const NOMOR_WA = "6281234567890"; // Ganti dengan nomor WA Anda
 
-    // =========================================================================
-    // 2. PEMUAT OTOMATIS FOTO KANG ENCEP
-    // =========================================================================
-    function muatFotoOtomatis() {
-      const daftarEkstensi = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.JPEG', '.PNG'];
-      document.querySelectorAll('[data-photo-file]').forEach((imgEl) => {
-        const namaDasar = imgEl.getAttribute('data-photo-file');
-        const kandidatFile = [];
-        daftarEkstensi.forEach(eks => kandidatFile.push('./' + namaDasar + eks));
-        
-        let indeks = 0;
-        function cobaFileBerikutnya() {
-          if (indeks >= kandidatFile.length) return;
-          const urlCoba = kandidatFile[indeks++];
-          const gambarUji = new Image();
-          gambarUji.onload = () => imgEl.src = urlCoba;
-          gambarUji.onerror = cobaFileBerikutnya;
-          gambarUji.src = urlCoba;
-        }
-        cobaFileBerikutnya();
-      });
-    }
+    function bukaModal() { document.getElementById('modalKontak').classList.remove('hidden'); }
+    function tutupModal() { document.getElementById('modalKontak').classList.add('hidden'); }
 
-    // =========================================================================
-    // 3. DATA 3 VIDEO ASLI YOUTUBE (Dari data Anda)
-    // =========================================================================
-    const modulVideo = [
-      {
-        judul: "Bimbingan Usaha Bakso Ekonomis",
-        durasi: "03:01",
-        deskripsi: "Bimbingan langsung pembuatan bakso di Rembang dengan racikan daging ayam 3kg & sapi 1kg. Menghasilkan tekstur kenyal, garing, dan 'berkulit'.",
-        tips: "Rahasia bakso kenyal dan garing ada pada teknik perendaman air es selama 10-15 menit setelah bakso mengapung, serta penggunaan takaran putih telur yang tepat.",
-        youtubeId: "uMvpXgbJH_8" 
-      },
-      {
-        judul: "Uji Tekstur & Cita Rasa Bakso",
-        durasi: "00:41",
-        deskripsi: "Melihat dari dekat hasil akhir bakso racikan Kang Encep yang memiliki tekstur berlapis, membal, dan sangat disukai pecinta bakso.",
-        tips: "Tekstur 'berkulit' pada bakso bisa dicapai dengan takaran putih telur dan pengenyal food grade kualitas baik tanpa bahan kimia berbahaya.",
-        youtubeId: "XGxVTmUmgYc"
-      },
-      {
-        judul: "Bimbingan Bakmi Halal Khas Cina",
-        durasi: "00:26",
-        deskripsi: "Proses bimbingan offline pembuatan bakmi halal di Jakarta, mulai dari teknik perebusan ayam kampung untuk kaldu dan minyak yang wangi maksimal.",
-        tips: "Kunci utama bakmi khas Cina yang halal terletak pada penggunaan ayam kampung asli dan teknik perebusan lambat untuk mendapatkan minyak kaldu yang gurih.",
-        youtubeId: "Q0DHTTG9mxU"
-      }
-    ];
-
-    let indeksModulAktif = 0;
-
-    function renderPlaylist() {
-      const container = document.getElementById('playlistContainer');
-      container.innerHTML = modulVideo.map((m, i) => `
-        <button onclick="pilihModul(${i})" class="w-full text-left p-3.5 rounded-xl transition border ${
-          i === indeksModulAktif
-            ? 'bg-gold/20 border-gold text-cream'
-            : 'bg-espresso/60 border-white/5 text-cream/75 hover:border-gold/40'
-        }">
-          <p class="font-bold text-sm leading-snug">${m.judul}</p>
-        </button>
-      `).join('');
-    }
-
-    function pilihModul(indeks) {
-      indeksModulAktif = indeks;
-      renderPlaylist();
-      putarVideoModul();
-    }
-
-    function putarVideoModul() {
-      const m = modulVideo[indeksModulAktif];
-      document.getElementById('activeModuleTip').textContent = `"${m.tips}"`;
-      
-      const areaAktif = document.getElementById('videoActiveArea');
-      // Memuat Iframe YouTube langsung
-      areaAktif.innerHTML = `
-        <iframe class="w-full h-full rounded-2xl" src="https://www.youtube.com/embed/${m.youtubeId}?autoplay=1&rel=0"
-          title="${m.judul}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      `;
-    }
-
-    // =========================================================================
-    // 4. DATA KATALOG KELAS (Ringkas & Sesuai Fakta Video)
-    // =========================================================================
-    const daftarKelas = [
-      {
-        label: "Menu Nusantara",
-        nama: "Bimbingan Usaha Bakso Komersial",
-        info: "Materi Praktik Langsung",
-        poin: ["Hitungan HPP harga jual ekonomis", "Teknik racikan ayam & daging sapi", "Rahasia tekstur kenyal dan berkulit"]
-      },
-      {
-        label: "Menu Oriental",
-        nama: "Spesialis Bakmi Halal Khas Cina",
-        info: "Materi Praktik Langsung",
-        poin: ["Pembuatan kaldu ayam kampung", "Minyak ayam wangi & bumbu dasar", "Teknik perebusan mie presisi"]
-      },
-      {
-        label: "Konsultasi Privat",
-        nama: "Pendampingan Usaha (UMKM) & Resto",
-        info: "Offline - Fleksibel Sesuai Request",
-        poin: ["Bebas request menu Nusantara/Chinese", "Evaluasi resep dan rasa menu lama", "Pendampingan standar kebersihan hotel"]
-      }
-    ];
-
-    function renderKelas() {
-      const grid = document.getElementById('gridKelas');
-      grid.innerHTML = daftarKelas.map(k => `
-        <div class="bg-white rounded-3xl p-6 border border-sand shadow-sm hover:shadow-xl transition flex flex-col justify-between">
-          <div>
-            <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-gold/15 text-espresso mb-3">${k.label}</span>
-            <h3 class="text-xl font-bold text-espresso leading-snug">${k.nama}</h3>
-            <p class="text-xs text-charcoal/60 mt-2 mb-4">${k.info}</p>
-            <ul class="space-y-2 text-xs sm:text-sm text-charcoal/80 border-t border-sand pt-4">
-              ${k.poin.map(p => `<li class="flex items-start gap-2"><span class="text-gold font-bold">✓</span><span>${p}</span></li>`).join('')}
-            </ul>
-          </div>
-          <button onclick="bukaModalDaftar('${k.nama}')" class="mt-6 w-full py-3 rounded-xl bg-espresso text-goldLight font-semibold text-sm hover:bg-charcoal transition">
-            Pesan Bimbingan Ini
-          </button>
-        </div>
-      `).join('');
-    }
-
-    // =========================================================================
-    // 5. MODAL WHATSAPP
-    // =========================================================================
-    function bukaModalDaftar(namaProgram) {
-      document.getElementById('inputProgram').value = namaProgram;
-      document.getElementById('modalDaftar').classList.remove('hidden');
-    }
-    function tutupModalDaftar() { document.getElementById('modalDaftar').classList.add('hidden'); }
-    function kirimKeWhatsApp(e) {
+    function kirimWA(e) {
       e.preventDefault();
-      const nama = document.getElementById('inputNama').value.trim();
-      const program = document.getElementById('inputProgram').value.trim();
-      const lokasi = document.getElementById('inputLokasi').value.trim();
-      const catatan = document.getElementById('inputCatatan').value.trim();
-      const teksPesan = [
-        `Halo Manajemen *Dapur Kang Encep*, saya ingin konsultasi terkait:`,
-        ``,
-        `• *Nama:* ${nama}`,
-        `• *Topik Bimbingan:* ${program}`,
-        `• *Lokasi / Domisili:* ${lokasi}`,
-        catatan ? `• *Catatan Tambahan:* ${catatan}` : ``,
-        ``,
-        `Mohon informasi lebih lanjut. Terima kasih!`
-      ].filter(Boolean).join('\n');
-      window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${encodeURIComponent(teksPesan)}`, '_blank');
-      tutupModalDaftar();
+      const nama = document.getElementById('waNama').value;
+      const materi = document.getElementById('waMateri').value;
+      const lokasi = document.getElementById('waLokasi').value;
+      const teks = `Halo Manajemen *Kang Encep*, saya ingin bertanya seputar bimbingan:\n\n• Nama: ${nama}\n• Materi: ${materi}\n• Lokasi: ${lokasi}\n\nMohon info jadwal dan biayanya. Terima kasih!`;
+      window.open(`https://wa.me/${NOMOR_WA}?text=${encodeURIComponent(teks)}`, '_blank');
+      tutupModal();
     }
 
-    // Inisialisasi
+    // Pemuat otomatis foto agar Anda tidak perlu pusing format jpg/png
     document.addEventListener('DOMContentLoaded', () => {
-      muatFotoOtomatis();
-      renderKelas();
-      pilihModul(0); // Memutar video pertama (Bakso Rembang) secara otomatis saat area video dilihat
+      const ekstensi = ['.jpg', '.jpeg', '.png', '.webp', '.JPG'];
+      document.querySelectorAll('[data-photo-file]').forEach((img) => {
+        const nama = img.getAttribute('data-photo-file');
+        let i = 0;
+        const cobaLagi = () => {
+          if (i >= ekstensi.length) return;
+          const url = `./${nama}${ekstensi[i++]}`;
+          const tester = new Image();
+          tester.onload = () => img.src = url;
+          tester.onerror = cobaLagi;
+          tester.src = url;
+        };
+        cobaLagi();
+      });
     });
   </script>
 </body>
